@@ -1,0 +1,1612 @@
+/* ___-_ main elements _-________________ *//* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  margin: 0; padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: '';  content: none; } table {  border-collapse: collapse; border-spacing: 0; }
+
+html, body { height: 100%; margin: 0; padding: 0; position: relative; overflow: hidden; }
+
+/* ___-_ font-face _-________________ */
+
+/*
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=3.2.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'), 
+       url('../fonts/fontawesome-webfont.woff?v=3.2.0') format('woff'), 
+       url('../fonts/fontawesome-webfont.ttf?v=3.2.0') format('truetype'), 
+       url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.ft-awesome { font-family: 'FontAwesome'; }
+*/
+
+@font-face {
+  font-family: 'seagram_tfbregular';
+  src: url('../font/seagram_tfb-webfont.eot');
+  src: url('../font/seagram_tfb-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/seagram_tfb-webfont.woff') format('woff'),
+       url('../font/seagram_tfb-webfont.ttf') format('truetype'),
+       url('../font/seagram_tfb-webfont.svg#seagram_tfbregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.ft-gothic { font-family: 'seagram_tfbregular', Arial, Helvetica, sans-serif; }
+
+body { color: #333; font-family: "RTVEfontR", Arial, Helvetica, sans-serif; font-size: 16px; position: relative; overflow:hidden;}
+
+/* ___-_ main elements _-________________ */
+h1{ padding-bottom: 24px; font-size: 1.75em; line-height: 1.2em; }
+h2{ padding-bottom: 20px; font-size: 1.75em; line-height: 1.2em; }
+h3{ padding-bottom: 20px; font-size: 1.25em; line-height: 1.2em; }
+h4{ padding-bottom: 10px; font-size: 1.25em; line-height: 1.2em; }
+h5{ padding-bottom: 10px; font-size: 1.5em; line-height: 1.1em; }
+h6{ padding-bottom:  8px; font-size: 1.1em; line-height: 1.1em; }
+
+a { text-decoration: underline; color: #888888; cursor: pointer;
+    -webkit-transition: color .3s ease-in;-moz-transition: color .3s ease-in;-ms-transition: color .3s ease-in;
+    -transition: color .3s ease-in;transition: color .3s ease-in; }
+  a:hover { color: #a8293c; }
+a.block { display: block; height: 100%; width: 100%; }
+
+p { line-height: 1.2em; }
+
+.negrita { font-weight: 800; }
+.pequenin { font-size: 0.7em; }
+
+/* ___-_ workers _-________________ */
+.inline { display: inline; }
+.wrapper { width: 960px; margin: 0 auto; }
+
+/* Media elements, image + text */
+.wk-media-l { float:left; }
+  .wk-media-l img,
+  .wk-media-r img { display:block; }
+.wk-media-r { display:table-cell; zoom:1; }
+
+/* Columns */
+.wk-col { width: 100%; margin: 0 1%; }
+.wk-col-l { display:inline; float:left; }
+.wk-col-r { display:inline; float:right; }
+.wk-col-50 { width: 48%; margin: 0 1%; }
+.wk-col-33 { width: 33%; }
+.wk-cent { text-align: center; }
+.wk-right { text-align: right; }
+
+/* Class for hidding elements if JavaScript is enabled */
+html.js body .hidden { display:none; }
+
+body.fallback {  }
+.nojschar, .no-js { overflow: auto; height: auto; }
+#nojschar { width: 980px; top: 15000px; position: absolute; }
+#nojschar.shown { top: 0; display: block; width: 90%; margin: 20px 5% 40px 5%; position: static; }
+.no-js #main-main { display: none; }
+.js #nojschar { display: none; }
+body.fallback { overflow: auto; background: url('../img/bg-oldstyle.jpg'); background-size: cover; }
+  body.fallback p { margin-bottom: 0.6em; }
+  body.fallback h1, body.fallback h2 { text-shadow: 0 1px 1px white; }
+  body.fallback a { color: #333; }
+  body.fallback article  a { float: right; color: #333; display: block; }
+  body.fallback article p a, body.fallback article li a,
+  body.fallback article h2 a { float: none; display: inline; }
+  .fallback article li { list-style: disc; margin-bottom: 0.6em; margin-left: 1em; }
+  body.fallback article video { width: 100%; height: auto; margin-bottom: 1.2em; }
+  body.fallback article > a:last-child { float: left; display: block; }
+  body.fallback #main,
+    body.fallback svg,
+    body.fallback .svg { display: none; }
+
+.wrap-table { display: table; height: 100%; }
+  .wrap-table-cell { display: table-cell; vertical-align: middle; }
+
+/* Clearfix trick to clear floated elements */
+.clearfix:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
+.clearfix { display:inline-block; } html[xmlns] .clearfix { display:block; }* html .clearfix { height:1%; }
+
+.strong, .winner { font-weight: 800; }
+
+div.hidden { display: none }
+.touch * { -webkit-transition: none!important;-moz-transition: none!important;-ms-transition: none!important;
+      -o-transition: none!important;transition: none!important; }
+/* ___-_ lab bars _-________________ */
+#lab-header { width:100%; top: 0; left: 0; z-index: 999; background: black; 
+    font-size: 0.8em; text-align: center; height: 2.4em; position: fixed; }
+  #lab-header .logo { position: relative; z-index: 1; float: left; height: 2.4em; width: 8.4em; padding: 0; background: url("../img/sp--lab.png") 5px 4px no-repeat; }
+    #lab-header .logo a { display:block; height: 100%; width: 100%; text-indent: -999px; overflow: hidden;}
+
+  #lab-header .social-lockup { position:absolute; top: 0; right: 0; }
+    .social-lockup-oficial { padding: 4px 0px; }
+    #lab-header .social-lockup a { display: block; float: right; text-indent: -999px; overflow: hidden; 
+        width: 30px; height: 30px; background: url("../img/sp--lab.png") top left no-repeat;  }
+      #lab-header .social-lockup .social-fbook { background-position: 5px -35px; }
+      #lab-header .social-lockup .social-twitter { background-position: 5px -68px; }
+
+#lab-footer { float: left; display :inline; width:100%; margin: 30px 0 0 0; padding: 0; position: absolute; z-index: 10;
+    background: black; font-size:13px; text-align:center; }
+  #lab-footer ul { display:inline; margin:0; padding:0; width:100%; float:left; line-height:25px;}
+    #lab-footer ul li { display:inline; margin:0; padding:0 5px 0 0; list-style:none; color:#c2c1c1;}
+    #lab-footer ul li a { color: #c2c1c1; text-decoration: none; padding: 0 5px}
+    #lab-footer ul li a:hover { text-decoration: underline; } 
+#lab-footer.lab-footer-fixed { position: fixed; bottom: 0; left: 0; }
+
+#preload, #preload2, #preload3, #no-preload { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: table; background: white; z-index: 998; }
+  #preload #pre-wrap, #preload2 #pre-wrap, #preload3 #pre-wrap, #no-preload #pre-wrap { display: table-cell; vertical-align: middle; text-align: center; }
+  #preload2 { z-index: 6; }
+  #preload3 { background: none; pointer-events: none; color: white; text-shadow: 1px 1px 7px black; }
+    #preload3 span { display: inline-block; width: 60px; height: 57px; background: url("../img/sp--main.png") -592px -270px no-repeat; }
+/* ___-_ layout _-________________ */
+#main { width: 100%; height: 100%; top: 105px; padding-bottom: 25px; overflow: hidden; position: absolute;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body:before, body:after { content: ''; width: 100%; height: 10px; position: absolute; bottom: -50px;
+  -webkit-transition: all .1s  ease-in-out;-moz-transition: all .1s  ease-in-out;-ms-transition: all .1s  ease-in-out;
+  -o-transition: all .1s ease-in-out;transition: all .1s  ease-in-out; z-index: 10; }
+body:after { top: -50px; }
+body.slidetop:after, body.slidebottom:before { box-shadow: 0 0 30px 70px rgb(63, 23, 34); }
+
+/* ___-_ slides _-________________ */
+.container { height: 100%; width: 100%; position: relative; }
+  .container .element { width: 100%; height: 100%; position: absolute; top: 0; left: 0;  z-index: 1;
+  background: url('../img/bg-oldstyle.jpg'); background-size: cover; }
+    .animation-ready .container .element {
+      -webkit-transition: all .3s ease-in;-moz-transition: all .3s ease-in;-ms-transition: all .3s ease-in;
+      -o-transition: all .3s ease-in;transition: all .3s ease-in; }
+    .container .extra { z-index: 3; opacity: 1; background: black; color: white; }
+    .container .element.hidden { opacity: 0; display: block; z-index: 0; }
+    .container .extra.hidden { left: 100%; display: block; opacity: 1; z-index: 3; } 
+    .container > .batalla { padding-right: 142px; 
+          -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+      .container > .batalla:before { content: ''; display: block; position: absolute; right: 0; top: 0; 
+        width: 144px; height: 100%; background: url("../img/bg--cenefa-cristiana.jpg") top left; }
+      .cont-arab > .batalla:before { background: url("../img/bg--cenefa-arabe.jpg") top left; }
+.paso { height: 100%; width: 100%; position: absolute; top: 0; left: 0 }
+  .paso-title { height: 100%; width: 100%; text-align: center; font-size: 2em; display: none; 
+      max-width: 1200px; margin: 0 auto; }
+    .paso-title-shown { display: block; }
+    .paso-title .wrap-table { width: 100%; }
+    .paso-title h1 { color: #000; text-shadow: 0 1px 1px #EBE8DF; margin: 0 20% 0 8%; }
+      #initial-paso-1 .paso-title h1 { margin: 0 20%; }
+    .paso-title h1 span { font-size: 2em; display: block; text-align: center; font-size: 1.7em; }
+  .paso-audio { display: none; }
+  .paso-video { display: none; width: 100%; height: 100%; background: black;}
+    .paso-video video { width: 100%; height: auto;  }
+    .paso-video .wrap-table { width: 100%; }
+  .touch .paso-video { display: block!important; }
+  .touch .video-wrap, .touch .video-wrap video { height: 100% }
+
+#creditos .wrap-table { width: 100%; text-align: center; }
+
+#main section.container div .wrapper-video, #main section.container div .wrapper-texto, 
+#main section.container div .wrapper-mapa { position: relative; float:left; height: 100%; width:100%; }
+
+/* ___-_ menu _-________________ */
+.menu-main { position: absolute; right: -185px; top: auto; height: 100%; width: 275px; padding-bottom: 0; 
+      text-align: center; text-transform: uppercase; font-size: 0.9em; z-index: 8;
+      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+      -webkit-transition: right .3s ease-in;-moz-transition: right .3s ease-in;-ms-transition: right .3s ease-in;
+      -transition: right .3s ease-in;transition: right .3s ease-in; 
+      -moz-transition-delay: .5s;-webkit-transition-delay: .5s; transition-delay: .5s;
+      -webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5), inset 0 20px 20px -20px rgba(0, 0, 0, 0.5); 
+      box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5), inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);}
+    .menu-main-wrap { background: white; background: rgba(255,255,255,0.85); }
+.es-extra .menu-main { right: -280px; }
+  .menu-main-wrap { position: relative; height: 100%; width: 100%; z-index: 1; }
+  .menu-main a { text-decoration: none; }
+    .menu-main a.act, .menu-main a.act span { color: #a8293c; }
+    .menu-main:hover, .menu-main-act { right: 0; }
+    .menu-main .titulo { display: inline-block; padding: 5px; color: #999; position: relative;
+        background: #FFFFFF; border: 1px #ccc solid; font-size: 1em; margin-bottom: 40px; }
+    .menu-main .menu { position: relative; display: block; margin-top: 25px; }
+  .menu-left { float: left; height: 100%; width: 90px; position: relative; }
+    .menu-bando { position: absolute; top: 20px; text-align: left; font-size: 0.9em; margin-left: 5px; }
+      .menu-bando a { display: block; position: relative; height: 13px; padding: 5px 0 5px 20px; }
+        .menu-bando a:before { display: block; content: ''; position: absolute; height: 20px; width: 20px; left: -1px; top: -1px;
+          background: url("../img/sp--main.png") -582px -16px; }
+          .menu-bando .bando-cristiano:hover:before, .menu-bando .bando-cristiano.act:before { background-position: -604px -16px; }
+        .menu-bando .bando-nazari:before { background-position: -582px -42px; }
+          .menu-bando .bando-nazari:hover:before, .menu-bando .bando-nazari.act:before { background-position: -605px -42px; }
+    .menu-batallas { display: table-cell; vertical-align: middle; }
+  .menu-right { float: left; height: 100%; width: 185px; background: white; 
+      -webkit-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5); box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);}
+    .menu-anyos { display: table-cell; vertical-align: middle; width: 90px;   }
+      .menu-anyos a span { display: block; font-weight: 600; font-size: 0.9em; color: #A8A0A1; }
+        .menu-anyos a:hover span { color: #a8293c; }
+.menu-touch { position: absolute; left: -55px; width: 45px; bottom: 20px; padding: 10px 5px; display: block; 
+    background: white; background: rgba(255,255,255,0.85); text-align: right; 
+    -webkit-box-shadow: 0 10px 20px 8px rgba(0, 0, 0, 0.5); box-shadow: 0 10px 20px 8px rgba(0, 0, 0, 0.5); }
+  div.menu-touch li { height: auto; }
+  .menu-touch li:before { display: none!important; }
+  .menu-touch a { display: block; width: 45px; height: 45px; text-indent: 9999px; overflow: hidden; 
+    background: url("../img/sp--main.png") -656px -41px;  }
+    .menu-touch #menu-expand { background-position: -656px -86px }
+      nav.menu-main-expanded #menu-expand { color: #a8293c; }
+    .menu-tc-social { float: left; }
+    .menu-tc-social a { width: 20px; height: 20px; margin: 0 1px; }
+      #menu-tw { background-position: -661px -20px; }
+      #menu-fb { background-position: -679px -20px; }
+  .menu-touch a:hover { background-position: -695px -41px;  }
+    .menu-touch #menu-expand:hover { background-position: -695px -86px }
+      #menu-tw:hover { background-position: -701px -20px; }
+      #menu-fb:hover { background-position: -719px -20px; }
+
+.touch .menu-main { right: -275px; z-index: 2; }
+.touch .container > .batalla:before { width: 54px; }
+.touch nav.menu-main-expanded { right: 0; }
+
+        /* ___-_ rayitas modernas _-________________ */
+  .menu-main li { height: 50px; position: relative; }
+    .menu-main .titulo:before, .menu-main li:before { content: ''; display: block; position: absolute; 
+      bottom: 4px; height: 20px; width: 1px; background: #ccc; left: 50%; }
+      .menu-main .titulo:before { bottom: -35px; height: 35px; }
+    .menu-main li:last-child:before { display: none; }
+      .menu-right li:before { height: 30px; } 
+      li.menu-right-salto:before { height: 17px; } 
+      .menu-right li:after { content: ''; display: block; position: absolute; 
+      bottom: 4px; height: 1px; width: 16px; background: #ccc; left: -6px; top: 5px; }
+      .menu-right li:last-child:after { display: none; }
+      .menu-right li:nth-child(2):after { display: none!important; }
+     /* ___-_ menu de isabel _-________________ */
+#isabel-menu { height: 80px; background: white; top: 25px; position: absolute; width: 100%; overflow: hidden; z-index: 10;
+    display: block; padding: 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    -webkit-box-shadow: 0px 5px 7px black; box-shadow: 0px 5px 7px black; }
+  #isabel-menu .logo { display: block; width: 245px; height: 48px; text-indent: -889px; overflow: hidden; margin-right: 50px; 
+      background: url(../img/sp--main.png) no-repeat; z-index: 2; }
+    .isb-links { margin-top: 16px;  position: absolute; width: 100%; display: block; overflow: hidden; height: 20px; z-index: 0;
+      text-align: center; padding-left: 270px; padding-right: 50px; text-align: center;
+      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+      .isb-links li { display: inline; padding: 0 15px; border-left: 2px solid #888888; }
+        .isb-links li:first-child { padding: 0 15px 0 0; border-left: 0; }
+      .isb-links a { text-decoration: none; text-transform: uppercase; line-height: 1.4em; }
+        .isb-links a.active { color: black; }
+        .isb-links a.active:hover { text-decoration: none; }
+
+@media all and (max-width: 700px) {
+  .isb-links { display: none; }
+}
+
+/* ___-_ bloques _-________________ */
+/* pop-ups *******************************************************************************/
+.pop { display: none; position: absolute; margin-left: -26px; margin-top: -26px; cursor: pointer; z-index: 1  }
+  .pop div.ft-gothic { font-family: 'seagram_tfbregular', Arial, Helvetica, sans-serif; 
+    font-size: 2.5em; line-height: 1.3em; text-shadow: 0 1px 1px #333; }
+  .pop .pop-num { width: 49px; height: 49px; font-size: 30px; text-align: center; line-height: 1.8em; 
+      font-family: RTVEfontsansB, Arial, Helvetica, sans-serif; 
+      -webkit-transition: all .2s ease-in;-moz-transition: all .2s ease-in;-ms-transition: all .2s ease-in; 
+      -transition: all .2s ease-in; transition: all .2s ease-in;
+      -webkit-border-radius: 36px; border-radius: 36px;
+      background: url(../img/sp--main.png) -588px -75px  no-repeat; position: relative; z-index: 2; }
+    .pop-act { z-index: 2 }
+    .pop-act .pop-num { box-shadow: 0 0 0 10px #ccc; box-shadow: 0 0 0 7px rgba(33,33,33,0.3), 10px 11px 25px black; }
+  .pop-inn { display: none; position: absolute; top: 26px; left: -192px; width: 400px; padding: 40px 20px 20px 20px;
+        background: #F7F4EF; color: #333; z-index: 1; opacity: 0; border-top: 5px solid #af212f;
+        -webkit-box-shadow: 0 4px 10px 1px black; box-shadow: 0 4px 10px 1px black;
+        -webkit-transition: all .2s ease-in;-moz-transition: all .2s ease-in;-ms-transition: all .2s ease-in; 
+        -transition: all .2s ease-in; transition: all .2s ease-in; }
+      .pop-inn h2 { padding-bottom: 0.5em; font-size: 1.5em; text-align: center; text-shadow: 0 1px white;  }
+      .pop-act .pop-inn { display: block; opacity: 0.95; }
+      .pop-inn video { margin-top: 10px; }
+          /* variaciones ****************************/
+  .pop-top div.pop-inn { top: auto; bottom: 26px; padding: 20px 20px 40px 20px; border-bottom: 5px solid #af212f; border-top: none; }
+  .pop-left div.pop-inn { left: -20px; }
+  .pop-right div.pop-inn { left: auto; right: -20px; }
+          /* custom ****************************/
+  .cuadroHereje .pop, .ordenes .pop,
+  .bl-papel-cuadro-act .pop { display: block; }
+    .bl-papel-cuadro-act .pop-1 { left: 20%; top: 50%; }
+    .bl-papel-cuadro-act .pop-2 { left: 24%; top: 32%; }
+    .bl-papel-cuadro-act .pop-3 { left: 65%; top: 56%; }
+    .bl-papel-cuadro-act .pop-4 { left: 46%; top: 22%; }
+  .escudo-noble { margin: 0; }
+  .escudo-noble .pop-num { position: relative; background: none; width: 100%; height: 0; padding-bottom: 100%; border-radius: 100px; }
+    .escudo-noble .pop-num img { position: absolute; top: 0; left: 0; width: 100%; }
+      .escudo-noble .pop-num img:first-child { position: relative; }
+    .escudo-noble .pop-inn { top: 70%; left: -155px; }
+    .escudo-noble.pop-top .pop-inn { bottom: 70%; }
+  .ordenes .pop-num { width: 91px; height: 91px; border-radius: 100px; padding: 0; }
+    .ordenes .pop-top .pop-inn { bottom: 50px; width: 500px; }
+    #orden-santiago .pop-num { background-position: 1px -301px; }
+    #orden-montesa .pop-num { background-position: -91px -301px; }
+    #orden-calatrava .pop-num { background-position: -189px -301px; }
+    #orden-alcantara .pop-num { background-position: -285px -301px; }
+
+    #extra-la-granada-de-isabel .pop { display: block; }
+    #extra-la-granada-de-isabel .pop-inn { width: 600px; left: -245px; opacity: 1}
+    #extra-la-granada-de-isabel .pop-inn h2{ text-align:left;margin-left:0%;margin-top:-2%;font-size:2em;color:#480008; }
+    #extra-la-granada-de-isabel .pop-inn p{ text-align:left;margin-left:0%;margin-bottom:2%;width:100%; }  
+      .VideoPop { width: 100%; height: auto;display: block;  }
+    #extra-la-granada-de-isabel  .pop-left div.pop-inn { left: -20px; }
+    #extra-la-granada-de-isabel  .pop-right div.pop-inn { left: auto; right: -20px; }
+
+@media (max-width: 1000px), (max-height: 800px) {
+  .pop-inn { width: 300px; left: -140px; font-size: 0.9em; padding: 30px 10px 10px 10px; }
+    .pop-inn h2 { font-size: 1.4em; padding-bottom: 0.2em; }
+  .pop-top div.pop-inn { padding: 10px 10px 30px 10px; }
+  #extra-la-granada-de-isabel .pop-inn { width: 400px; }
+}
+@media (max-width: 800px) {
+  #batalla-loja-extra-papel-isabel { font-size: 0.6em; }
+  .bl-papel-cuadro .pop-inn { width: 200px; left: -100px; }
+  #extra-la-granada-de-isabel .pop-inn { width: 300px; }
+}
+
+/* __-_-- bloque para info de cuadros ------___------ */
+.cuadro-info-butt { position: absolute; bottom: 40px; left: 40px; width: 41px; height: 41px; z-index: 4; }
+  .cuadro-info-butt:before { position: absolute; bottom: 0; left: 0; width: 41px; height: 41px; z-index: 3;
+      background: url(../img/sp--main.png) no-repeat -525px -22px; content: ''; }
+  .cuadro-info-butt:hover .cuadro-info { width: 400px; }
+    .cuadro-info {  width: 0; position: absolute; left: 25px; top: 2px;
+      background: white; color: #333; overflow: hidden; word-wrap: no-wrap;
+      left: 20px; z-index: 2; opacity: 0.8;
+      -webkit-transition: all .6s;-moz-transition: all .6s;-ms-transition: all .6s;
+      -transition: all .6s;transition: all .6s;
+      -moz-box-sizing: border-box; -webkit- box-sizing: border-box; box-sizing: border-box; }
+    .cuadro-info:hover { width: 400px;  }
+      .cuadro-info-wrap { padding: 4px 10px 2px 30px; white-space: nowrap; color: #a8293c; }
+        .cuadro-info-wrap span { font-size: 0.8em; font-family: Arial, Helvetica, sans-serif; color: #333; }
+        .cuadro-info-wrap strong { font-weight: 800 }
+  .cuadro-info-butt-right { left: initial; right: 40px; } 
+    .cuadro-info-butt-right .cuadro-info { left: initial; right: 25px; }
+    #toma-zahara-extra-inquisicion .cuadro-info-butt:hover .cuadro-info,
+    #toma-granada-extra-judios-paso-3 .cuadro-info-butt:hover .cuadro-info{ width: 470px;  }     
+    #batalla-loja-extra-papel-isabel .cuadro-info-butt:hover .cuadro-info{ width: 700px;  }
+    #batalla-alhama-extra-reestructuracion-nobleza .cuadro-info-butt:hover .cuadro-info{ width: 470px;  }
+    #batalla-alhama .texto-nobleza { width: 33%; padding-left: 33%; padding-bottom: 3%; }
+
+    #toma-granada-extra-judios-paso-3 .cuadro-info-butt:hover .cuadro-info{ width: 470px;  } /*ancho especial para algunos titulos */
+/* ___-_ slides _-________________ */
+.wrapper-mapa, .wrapper-video, .wrapper-texto { display: block; height: 100%; width: 100%; }
+
+.wrap-last-page { position: absolute; top: 0; left: 0; width: 100%;  height: auto; }
+
+p.cita { width: 74%; margin: 0 20% 0 8%; }
+  p.cita .cita-author { text-align: right; margin-top: 1em; text-transform: uppercase; font-size: 0.8em; display: block; }
+
+  /* ___-_ pasos automáticos _-________________ */
+.multipaso .paso-auto { opacity: 0; z-index: -1;
+    -moz-transition: opacity .4s ease-in; -o-transition: opacity .4s ease-in; 
+    -ms-transition: opacity .4s ease-in; transition: opacity .4s ease-in }
+.multipaso-1 .paso-1, .multipaso-5 .paso-5, .multipaso-6 .paso-6, .multipaso-3 .paso-3, .multipaso-4 .paso-4, .multipaso-2 .paso-2, 
+.multipaso-0 .paso-0, .multipaso-7 .paso-7, .multipaso-8 .paso-8, .multipaso-9 .paso-9,
+  .multipaso-0-tempIN .paso-0P, .multipaso-1-tempIN .paso-1P, .multipaso-2-tempIN .paso-2P, .multipaso-3-tempIN .paso-3P,
+  .multipaso-4-tempIN .paso-4P, .multipaso-5-tempIN .paso-5P, .multipaso-6-tempIN .paso-6P,
+  .multipaso-7-tempIN .paso-7P, .multipaso-8-tempIN .paso-8P, .multipaso-9-tempIN .paso-9P { display: block; opacity: 1; z-index: 3; }
+
+.map-wrap-steps { position: absolute; top: 53%; left: 12%; width: 31%; }
+  .paso-body { font-size: 1.2em; margin-bottom: 0.2em; }
+    .paso-body strong { font-weight: 800; font-family: "RTVEfontB", Arial, Helvetica, sans-serif; font-size: 1.4em; }
+    .paso-body-r { text-align: right; }
+  .map-wrap-steps .paso-auto:nth-child(3) { margin-left: 1em; }
+  .map-wrap-steps .paso-auto:nth-child(4) { margin-left: 2em; }
+    .map-wrap-steps .ft-gothic { font-style: italic; font-size: 1.4em; margin-right: 0.4em; }
+  #batalla-loja .map-wrap-steps .paso-auto:nth-child(4) { width: 46%; margin-top: 2em; text-align: right; }
+  #sitio-malaga .map-wrap-steps .paso-auto:nth-child(4) { width: 46%; margin-top: 2em; text-align: right; }
+
+.map-wrap-steps-end { position: absolute; bottom: 6%; left: inherit; right: 28%; width: 25%;  }  
+  .map-wrap-steps-end p { line-height: 1em; text-align: right; }
+  .map-wrap-steps-end-full { width: 60%; text-align: right;}
+    #bat-zahara .map-wrap-steps-end-full { width: 45% }
+    .map-wrap-steps-end-full .label { float: right; margin: 0 0 0 3em; }
+
+  /* bloquecillo etiquetas */
+.label { color: white; padding: 32px 22px; font-size: 1em; text-shadow: none; position: relative;
+    float: right; margin: 2% 0; width: 87%; max-width: 249px; text-align: center; }
+  .label a { color: white; text-decoration: none; text-transform: uppercase; }
+  .label img { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1; }
+
+.paso-ico { display: block; position: absolute; overflow: hidden; text-indent: -999px;  }
+  .paso-ico img { width: 100%; height: auto; display: block; }
+  .paso-ico-battles { display: block; width: 2%; height: auto; text-indent: -999px; position: absolute; overflow: hidden; margin-left: -0.8%;
+    background-position: -286px -36px; }
+    .paso-ico-arabe { background-position: -206px -36px; }
+  .paso-ico-battles-off { background-position: -460px -36px;  }
+    /*.paso-ico-battles:hover { background-position: -209px -36px; }*/
+      .ico-cordoba { left: auto; bottom: 30.4%; right: 67.2%; }
+      .ico-ecija { left: 30.9%; bottom: 23.6%; }
+      .ico-ecija2 { left: 31.5%; bottom: 28.6%; }
+      .ico-grana { right: 55.3%; bottom: 22.5%; }
+      .ico-sevilla { left: 25.4%; bottom: 25.5%; }
+      .ico-medina { right: 73.1%; bottom: 14.8%; }
+      .ico-loja { right: 58.7%; bottom: 21.8%; }
+      .ico-loja2 { right: 59.7%; bottom: 22.4%; }
+      .ico-cabra { right: 60.5%; bottom: 29.6%; }
+      .ico-porcuna { left: auto; bottom: 34.6%; right: 61%; }
+      .ico-alora { left: 34.9%; bottom: 18.6%; }
+      .ico-cadiz { left: 24.3%; bottom: 16.6%; }
+      .ico-malaga { left: 36.9%; bottom: 18.5%; }
+      .ico-malaga2 { left: 35.9%; bottom: 16.5%; }
+      .ico-marbella { left: 31.8%; bottom: 13.8%; }
+      .ico-fuengi { left: 34.2%; bottom: 16.2%; }
+      .ico-ilora { left: 40.5%; bottom: 27.2%; }
+      .ico-montef { left: 37.5%; bottom: 30.5%; }
+      .ico-velez { left: 39.4%; bottom: 17.5%; }
+      .ico-baza { left: 47.5%; bottom: 27.9%; }
+      .ico-alca { left: 39.2%; bottom: 25.6%; }
+      .ico-jaen { left: auto; bottom: 30.4%; right: 58%; }
+      .ico-almeria { right: 49.8%; bottom: 18.8%; }
+      .ico-guadix { right: 53.8%; bottom: 21.8%; }
+      .ico-alcala { right: 59.8%; bottom: 27.6%; }
+      .ico-alpujarra { right: 49.8%; bottom: 18.8%; }
+      .go-zahara { left: 29.5%; bottom: 18.4%; }
+      .go-alhama { left: 39.7%; bottom: 21.4%; }
+      .go-lucena { left: 36.1%; bottom: 24.6%; }
+      .go-alora { left: 34.8%; bottom: 18.7%; }
+      .go-ronda { left: 31%; bottom: 19.5%; }
+      .go-loja { left: 36%; bottom: 20.5%; }
+      .go-loja2 { left: 36%; bottom: 25.5%; }
+      .go-malaga { left: 34.5%; bottom: 16%; }
+      .go-baza { left: 45%; bottom: 24%; }
+      .go-granada { left: 40.4%; bottom: 21.4%; }
+
+.paso-arrow { background: url(../img/bg--lucena-arrows.png) no-repeat; display: block; position: absolute; overflow: hidden; text-indent: -999px; }
+  .arrow-cordoba1 { width: 100px; height: 50px; bottom: 25%; left: 31%; background-position: 0px -124px; }
+  .arrow-cordoba2 { bottom: 22%; }
+  .arrow-cordoba-off { background-position: 0px -60px; }
+  .arrow-grana { width: 40px; height: 28px; bottom: 20.4%; left: 40.6%; background-position: -127px -50px; }
+  .arrow-grana-off { background-position: -127px -90px; }
+  .arrow-medina { width: 190px; height: 80px; bottom: 14.4%; left: 24.9%; background-position: -170px -36px; }
+  .arrow-medina-off { background-position: -127px -90px;  }
+
+.multipaso .paso-popup { position: absolute; text-align: center; width: 6%; height: 8%; left: -10%; 
+    margin-right: 50px; margin-left: -50px; 
+    -moz-transition: all 2s ease-in; -o-transition: all 2s; 
+    -ms-transition: all 2s ease-in; transition: all 2s; }
+  .paso-pop-img { position: relative; height: 100%; }
+    .paso-pop-img img { position: absolute; left: 0; right: 0; border-radius: 12321px; width: 100%; height: auto; }
+  .paso-pop-tit { color: #2c241e; text-shadow: 0 1px white; font-size: 1.2em; }
+  .paso-pop-cont { display: none; padding: 30%; position: absolute; top: -20%; left: -20px; width: 400px;
+    background: #F7F4EF; z-index: -1; padding-left: 140%; text-align: left; font-size: 1.2em; min-height: 100%;
+    -webkit-box-shadow: -5px -5px 25px rgba(0,0,0,0.6); box-shadow: -5px -5px 25px rgba(0,0,0,0.6); }
+    .paso-popup-top .paso-pop-cont { top: inherit; bottom: -54%; } 
+
+.multipaso-1 .paso-popup.paso-1, .multipaso-5 .paso-popup.paso-5, .multipaso-6 .paso-popup.paso-6, .multipaso-3 .paso-popup.paso-3, 
+.multipaso-4 .paso-popup.paso-4, .multipaso-2 .paso-popup.paso-2, .multipaso-0 .paso-popup.paso-0, .multipaso-7 .paso-popup.paso-7, 
+.multipaso-8 .paso-popup.paso-8, .multipaso-9 .paso-popup.paso-9, 
+.multipaso-0-tempIN .paso-popup.paso-0P, .multipaso-1-tempIN .paso-popup.paso-1P, .multipaso-2-tempIN .paso-popup.paso-2P, 
+.multipaso-3-tempIN .paso-popup.paso-3P, .multipaso-4-tempIN .paso-popup.paso-4P, .multipaso-5-tempIN .paso-popup.paso-5P, 
+.multipaso-6-tempIN .paso-popup.paso-6P, .multipaso-7-tempIN .paso-popup.paso-7P, .multipaso-8-tempIN .paso-popup.paso-8P, 
+.multipaso-9-tempIN .paso-popup.paso-9P { left: 15%; z-index: 5;  }
+.multipaso-1 .paso-popup-left.paso-1, .multipaso-5 .paso-popup-left.paso-5, .multipaso-6 .paso-popup-left.paso-6, .multipaso-3 .paso-popup-left.paso-3, 
+.multipaso-4 .paso-popup-left.paso-4, .multipaso-2 .paso-popup-left.paso-2, .multipaso-0 .paso-popup-left.paso-0, .multipaso-7 .paso-popup-left.paso-7, 
+.multipaso-8 .paso-popup-left.paso-8, .multipaso-9 .paso-popup-left.paso-9, 
+.multipaso-0-tempIN .paso-popup-left.paso-0P, .multipaso-1-tempIN .paso-popup-left.paso-1P, .multipaso-2-tempIN .paso-popup-left.paso-2P, 
+.multipaso-3-tempIN .paso-popup-left.paso-3P, .multipaso-4-tempIN .paso-popup-left.paso-4P, .multipaso-5-tempIN .paso-popup-left.paso-5P, 
+.multipaso-6-tempIN .paso-popup-left.paso-6P, .multipaso-7-tempIN .paso-popup-left.paso-7P, .multipaso-8-tempIN .paso-popup-left.paso-8P, 
+.multipaso-9-tempIN .paso-popup-left.paso-9P { right: 30%; left: inherit; z-index: 5; }
+
+.multipaso .paso-popup-left { left: inherit; right: -10%; }
+  .multipaso  .paso-popup-left .paso-pop-cont { left: inherit; right: -20px; padding-right: 150%; padding-left: 25px; }
+.paso-pop-act { z-index: 6!important; }
+  .paso-pop-alia { bottom: 9%; }
+  .paso-pop-paco { bottom: 20%; }
+  .paso-pop-merlo { bottom: 15%; }
+  .paso-pop-mulai { bottom: 30%; }
+  .paso-pop-captor { bottom: 25%; }
+  .paso-pop-zegries { bottom: 23%; }
+  .paso-pop-frente { bottom: 27%;  }
+  .paso-pop-viveres { bottom: 12%;  }
+  .paso-pop-capito { bottom: 20%;  }
+  .paso-pop-santafe { bottom: 39%; top: ''; }
+  .paso-pop-tarazona { bottom: 13%; }
+  .paso-pop-zagal { bottom: 17%; }
+  .paso-pop-diverso { bottom: 26%; }
+  .paso-pop-atenta { bottom: 11%; }
+
+.multipaso .paso-title { opacity: 0; 
+    -moz-transition: all .5s ease-in; -o-transition: all .5s; 
+    -ms-transition: all .5s ease-in; transition: all .5s; }
+  .multipaso-0 .paso-title { opacity: 1; display: block; }
+
+.paso-text { font-size: 1.4em; position: absolute; font-family: 'seagram_tfbregular', Arial, Helvetica, sans-serif; 
+    width: 200px; margin-left: -100px; text-align: center; }
+    .paso-text-left { text-align: left; }
+    .paso-text-right { text-align: right; }
+  .tit-zahara { left: 29.6%; bottom: 16.8%; }
+  .tit-alhama { left: 39.7%; top: 79.3%; }
+  .tit-cordoba { left: 31.5%; bottom: 28.3%; }
+  .tit-porcuna { left: 37.9%; bottom: 32.5%; }
+  .tit-ecija { left: 30.9%; bottom: 21.7%; }
+  .tit-ecija2 { left: 31.6%; bottom: 26.7%; }
+  .tit-grana { left: 43.8%; bottom: 20.7%; }
+  .tit-medina { left: 28.7%; bottom: 11.2%; width: 100px; }
+  .tit-sevilla { left: 25.4%; bottom: 23.4%; }
+  .tit-lucena { left: 36.2%; bottom: 22.6%; }
+  .tit-loja { left: 43.4%; bottom: 19.8%; width: 100px; }
+  .tit-loja2 { left: 41.6%; bottom: 20.3%; width: 100px; }
+  .tit-loja3 { left: 39.4%; bottom: 23.8%; width: 100px; }
+  .tit-cabra { left: 42.4%; bottom: 27.7%; width: 100px; }
+  .tit-alora { left: 34.8%; bottom: 16.7%; }
+  .tit-ronda { left: 31%; bottom: 17.9%; }
+  .tit-cadiz { left: 24.3%; bottom: 14.6%; }
+  .tit-malaga { left: 37.1%; bottom: 16.6%; }
+  .tit-malaga2 { left: 36.1%; bottom: 14.6%; }
+  .tit-velez { left: 44.1%; bottom: 13.6%; width: 100px; }
+  .tit-marbella { left: 31.5%; bottom: 11.8%; }
+  .tit-fuengi { left: 35.9%; bottom: 14%; }
+  .tit-ilora { left: 40.6%; bottom: 25.2%; }
+  .tit-montef { left: 37.5%; bottom: 29%; }
+  .tit-baza { left: 47.5%; bottom: 26.1%; }
+  .tit-alca { left: 38.9%; bottom: 23.5%; }
+  .tit-jaen { left: 40.8%; bottom: 28.5%; }
+  .tit-almeria { left: 52.7%; bottom: 16.7%; width: 100px; }
+  .tit-guadix { left: 48.7%; bottom: 19.7%; width: 100px; }
+  .tit-alcala { left: 39.3%; bottom: 23.9%; }
+  .tit-alpujarra { left: 49.3%; bottom: 14.9%; }
+
+  /* ___-_ tooltips del mapa _-________________ */
+.map-wrap .tooltip { position: absolute; left: 25%; top: 57%; width: 170px; cursor: pointer; z-index: -1;
+    padding-bottom: 20px; font-size: 1.75em; line-height: 0.9em; font-size: 2em;
+    margin-left: -100px; text-align: center; opacity: 0; }
+  .map-wrap .tooltip-map1 { opacity: 1; z-index: 1; display: block; }
+    .pop-zahara div.pop-num { height: 50px; width: 50px; font-size: 1.2em; text-shadow: 0 1px 1px white;
+      background-position: -622px -181px;
+      -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); 
+      -o-transform: scale(1.5); transform: scale(1.5); }
+    .pop-zahara div.pop-num span { display: block; width: 200px; margin-left: -80px; position: absolute;
+        text-align: center; bottom: 55px; } 
+      .pop-zahara .pop-inn { top: 50px; width: 900px; font-size: 1.2em; }
+      .pop-zahara .pop-inn p { margin-bottom: 0.4em; }
+  .pop-left.pop-zahara .pop-inn { left: -50px; }
+  .pop-zahara .pop-inn h4 { font-size: 2em; }
+  .pop-zahara.pop-act,   .pop-zahara.pop-act .pop-inn { z-index: 5; }
+  .pop-zahara.pop-act .pop-num { box-shadow: 10px 11px 25px black; }
+
+#bat-zahara h1 { font-size: 2.2em; position: absolute; top: 2%; text-align: right; left: 10%; }
+
+  /* ___-_ contamuertos _-________________ */
+.batalla-contador { width: 25%; height: auto; position: absolute; top: 55%; right: 28%; left: inherit; 
+    text-align: center; height: 0; padding-bottom: 7.5%; 
+    background: rgba(255,255,255,0.2) url('../img/counter.svg') no-repeat 0 bottom; background-size: contain; opacity: 0; 
+    border: 1px solid black; box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    -moz-transition: all 5s ease-in; -o-transition: all 5s; 
+    -ms-transition: all 5s ease-in; transition: all 5s; }
+  .batalla-contador .wk-col-50 { padding: 0 10%; 
+      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .batalla-contador .cont-title { text-align: center; font-size: 1.5em; line-height: 2em; }
+  .batalla-contador .cont-title2 { color: #a82a3d; line-height: 1.5em; font-size: 0.9em; text-transform: uppercase; }
+    .batalla-contador .wk-col-l .cont-title2 { font-size: 0.85em }
+  .batalla-contador .cont-dato { padding: 0; font-size: 0.7em; }
+    .batalla-contador .cont-dato span { display: block; font-size: 2em; }
+  .batalla-contador-bot { position: absolute; bottom: 5%; width: 26%; }
+    .batalla-contador-bot.wk-col-l { left: 13%; }
+    .batalla-contador-bot.wk-col-r { right: 9%; }
+  #sitio-malaga .batalla-contador-bot.wk-col-r .wk-col-50 { width: 100% }
+
+.extra-lnk { display: none; opacity: 0; margin: 5% 10% 0 10%; width: 65%; position: relative;
+    -moz-transition: all 5s ease-in; -o-transition: all 5s; 
+    -ms-transition: all 5s ease-in; transition: all 5s; }
+  .extra-lnk .cont-title { font-size: 1.6em; line-height: 2em; }
+  .extra-lnk .extra-l { width: 60%; margin-right: 10%; }
+  .extra-lnk .extra-r { width: 30%; font-size: 0.8em; position: absolute; bottom: 0; right: 0; }
+    .extra-lnk .go-link { color: white; text-decoration: none; }
+
+  .map-wrap .tooltip:before { content: ''; position: absolute; display: block; width: 35px; height: 33px;
+    bottom: -20px; left: 50%; background: url("../img/icon--cruz.svg"); background-size: cover; 
+    margin-left: -15px; }
+  .map-wrap .tooltip:hover:before{ z-index: 3; }
+
+/* ___-_ mapa _-________________ */
+.paso-map { width: 100%; height: 100%; position: relative; text-shadow: 0 1px 4px white; }
+  .paso-map .svg { width: 100%; height: auto; pointer-events: none; } 
+  .paso-map .map-wrap { width: 100%; height: auto; position: absolute; z-index: 0;
+      opacity: 0; display: none; font-size: 1.2em;
+      -moz-transition: opacity 5s ease-in; -o-transition: opacity 5s ease-in;  
+      -ms-transition: opacity 5s ease-in; transition: opacity 5s ease-in }
+  #toma-zahara-paso-2 .map-wrap { width: 100%; left: 0; display: block; opacity: 1; font-size: 1.6em;
+      -webkit-transform: scale(0.45); -moz-transform: scale(0.45); -ms-transform: scale(0.45); 
+      -o-transform: scale(0.45); transform: scale(0.45);
+      -webkit-transform-origin: 50% 90%; -moz-transform-origin: 50% 90%; -ms-transform-origin: 50% 90%; 
+      -o-transform-origin: 50% 90%;; transform-origin: 50% 90%; }
+  .multipaso-0 .map-wrap, .multipaso-0-tempIN .map-wrap, 
+  .multipaso-1 .map-wrap, .multipaso-1-tempIN .map-wrap, 
+  .multipaso-2 .map-wrap, .multipaso-2-tempIN .map-wrap, 
+  .multipaso-3 .map-wrap, .multipaso-3-tempIN .map-wrap, 
+  .multipaso-4 .map-wrap, .multipaso-4-tempIN .map-wrap, 
+  .multipaso-5 .map-wrap, .multipaso-5-tempIN .map-wrap, 
+  .multipaso-6 .map-wrap, .multipaso-6-tempIN .map-wrap, 
+  .multipaso-7 .map-wrap, .multipaso-7-tempIN .map-wrap { opacity: 1; display: block; }
+
+#toma-zahara-paso-2 .map-wrap-steps-end { position: absolute; bottom: 2%; width: 17%; font-size: 0.95em; right: 150px; z-index: 13; }
+  #toma-zahara-paso-2 .map-wrap-steps-end p { text-align: right; }
+  #toma-zahara-paso-2 .map-wrap-steps-end .label { float: left; }
+  #toma-zahara-paso-2 div.help-bottom { font-size: 1em; width: 24%; padding: 0 0 60px 0; left: 30%; }
+
+.multipaso .paso-rapharrow { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0!important; pointer-events: none; }
+  .paso-rapharrow svg { position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; }
+
+.tooltip .ttip { position: absolute; z-index: 6;display: none; background: #F7F4EF; text-align: left; width: 801px; margin-top: 20px;
+  box-shadow: 1px 1px 16px 3px #666; font-family: "RTVEfontR", Arial, Helvetica, sans-serif;
+  font-size: 0.7em; padding: 20px; }
+    .ttip-left .ttip { margin-left: -400px; }
+    .ttip-bottom .ttip { bottom: 0; }
+  .tooltip .ttip h4 { font-size: 1em; font-weight: 800; }
+.map-wrap .tooltip-act { z-index: 20; }
+  .map-wrap .tooltip-act .ttip { z-index: 10; }
+
+.introVideo { width: 100%; height: auto;display: block;  }
+
+#initial { z-index: 2; }
+  #initial.hidden { display: none; }
+  #initial:before { display: none; }
+  #initial-paso-0 { width: 100%; padding: 0; z-index: 5; background: black; }
+#initial-paso-1 .main { margin: 0 5% 0.2em 5%; font-size: 0.7em; max-width: 1000px; }
+
+#map-ttip-portugal { left: 13%; top: 41%; }
+#map-ttip-aragon { left: 65%; top: 28%; width: 201px;  }
+#map-ttip-granada { left: 50%; top: 67%; width: 201px; }
+#map-ttip-castilla { left: 40%; top: 35%; }
+#map-ttip-navarra { left: 55%; top: 9%; width: 201px; }
+
+#toma-zahara-paso-3 {  }
+#batalla-lucena .map-wrap-steps { width: 17%; }
+#toma-baza .map-wrap-steps { width: 25%; }
+#toma-baza-paso-2 .paso-rendicion { width: 285px; }
+#batalla-alora-paso-2 .paso-fernando {  width: 285px;  }
+#batalla-alhama .map-wrap-steps { top: 52%; }
+  #batalla-alhama .map-wrap-steps-end-full p { padding-top: 1.4em; }
+
+/* _---___--_  página de inicio y ayuda  */ 
+.help { font-family: "RTVEfontSansR", Arial, Helvetica, sans-serif }
+  .help h1 { text-transform: uppercase; padding-bottom: 0;  }
+  .help .subtitle { padding-bottom: 1em; }
+.help .character-select { clear: left; width: 688px; margin: 0 auto; font-size: 0.6em; }
+  .character-select .otros { margin-bottom: 70px; clear: both; display: block; width: 360px; margin: 30px auto 70px auto; padding-top: 20px; } 
+.help .character-select div ,
+  .help .character-select a { display: block; float: left; width: 31%; }
+  .help div.char-sel-mid { font-size: 0.9em; position: relative; width: 38%; } 
+    .help .char-sel-mid:before { display: block; content: ''; height: 50px; width: 100px; position: absolute; left: 71px; bottom: -50px; 
+      background: url(../img/sp--main.png) no-repeat -203px -123px; } 
+  .help .click-bando { color: white; text-decoration: none; padding-top: 160px; padding-bottom: 20px; 
+      background: url(../img/sp--main.png) no-repeat -10px  -73px; }
+    .help .click-bando:hover { text-decoration: underline; }
+  .help .click-bando-arabe { background-position: -310px -73px; }
+  .help .help-bottom, .paso-title .help-bottom, #toma-zahara-paso-2 .help-bottom  { position: absolute; bottom: 0; width: 100%; margin: 0 auto; font-size: 0.5em;
+      padding-right: 400px; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 60px; }
+    .help .help-bottom:before,  #toma-zahara-paso-2 .help-bottom:before, .paso-title .help-bottom:before { display: block; content: ''; height: 50px; width: 100px; position: absolute; left: 40.5%; top: 30px;
+      background: url(../img/sp--main.png) no-repeat -208px -183px; } 
+  .help .help-right { position: absolute; bottom: 0px; right: 50px; font-size: 0.5em;
+      -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 40px; }
+    .help .help-right:before { display: block; content: ''; height: 50px; width: 100px; position: absolute; right: -46px; top: 19px;
+      background: url(../img/sp--main.png) no-repeat -208px -233px; } 
+
+  .no-touch .help .help-right { right: 180px;}
+
+#help2 { display: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: black; background: rgba(0,0,0,0.8);
+  z-index: 10; color: white; font-size: 2em; text-align: center;}
+  #help2 .wrap-table { width: 100%; }
+  #help2 .click-close { display: block; text-indent: -999px; overflow: hidden; 
+    position: absolute; width: 32px; height: 32px; top: 20px; right: 20px;
+    background: url(../img/sp--main.png) no-repeat -529px -193px; }
+  #help2 .click-close:hover { background-position: -531px -232px; }
+
+@media (max-width: 2000px) {
+  .paso-map .map-wrap { font-size: 1em; }
+}
+@media (max-width: 1600px) {
+  .paso-map .map-wrap { font-size: 0.9em; }
+}
+@media (max-width: 1200px) {
+  .paso-map .map-wrap { font-size: 0.8em; }
+  .map-wrap-steps-end { font-size: 1.2em; text-align: right; }
+  .pop-zahara div.pop-num { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1);}
+}
+
+@media (max-width: 1000px) {
+  .paso-map .map-wrap { font-size: 0.7em; }
+  .label { width: 180px; padding: 25px 22px; }
+  #initial-paso-1 { font-size: 0.8em;}
+}
+@media (max-height: 700px) {
+  .help .help-right { padding-bottom: 20px; }
+  .help .help-right { padding-bottom: 30px; }
+}
+
+/* ___-_ mapa expulsión judíos _-________________ */
+#map-judios { overflow-x:hidden; background: #000; width: 100%; }
+
+    #map-judios #paises a { display: block; padding-left:18px;padding-bottom:10px; }
+    #map-judios #paises h1 {color:white;font-size:20px;font-weight:bold;letter-spacing:1px;}
+  #map-judios img { width: 100%; height: auto }
+
+/* http://cssload.net/ */
+#circularG { position:relative; width:128px; height:128px; margin: 0 auto; }
+  .circularG { position: absolute; background-color: #bd1b42; width:29px; height:29px;
+    -moz-border-radius:19px; -moz-animation-name:bounce_circularG; -moz-animation-duration:1.04s; -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:linear; -webkit-border-radius:19px;
+    -webkit-animation-name:bounce_circularG; -webkit-animation-duration:1.04s; -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:linear; -ms-border-radius:19px;
+    -ms-animation-name:bounce_circularG; -ms-animation-duration:1.04s; -ms-animation-iteration-count:infinite;
+    -ms-animation-direction:linear; -o-border-radius:19px; -o-animation-name:bounce_circularG;
+    -o-animation-duration:1.04s; -o-animation-iteration-count:infinite; -o-animation-direction:linear;
+    border-radius:19px; -webkit-animation-name:bounce_circularG; -webkit-animation-duration:1.04s; -webkit-animation-iteration-count:infinite; -webkit-animation-direction:linear; }
+  #circularG_1{  left:0; top:50px; -moz-animation-delay:0.39s;-webkit-animation-delay:0.39s;
+    -ms-animation-delay:0.39s; -o-animation-delay:0.39s; -webkit-animation-delay:0.39s;
+  }
+  #circularG_2{ left:14px; top:14px; -moz-animation-delay:0.52s; -webkit-animation-delay:0.52s;
+    -ms-animation-delay:0.52s; -o-animation-delay:0.52s; -webkit-animation-delay:0.52s;
+  }
+  #circularG_3{ top:0; left:50px; -moz-animation-delay:0.65s; -webkit-animation-delay:0.65s;
+    -ms-animation-delay:0.65s; -o-animation-delay:0.65s; -webkit-animation-delay:0.65s;
+  }
+  #circularG_4{ right:14px; top:14px; -moz-animation-delay:0.78s; -webkit-animation-delay:0.78s;
+    -ms-animation-delay:0.78s; -o-animation-delay:0.78s; -webkit-animation-delay:0.78s;
+  }
+  #circularG_5{ right:0; top:50px; -moz-animation-delay:0.91s; -webkit-animation-delay:0.91s;
+    -ms-animation-delay:0.91s; -o-animation-delay:0.91s; -webkit-animation-delay:0.91s; }
+  #circularG_6{ right:14px; bottom:14px; -moz-animation-delay:1.04s; -webkit-animation-delay:1.04s;
+    -ms-animation-delay:1.04s; -o-animation-delay:1.04s; -webkit-animation-delay:1.04s; }
+  #circularG_7 { left:50px; bottom:0; -moz-animation-delay:1.17s; -webkit-animation-delay:1.17s;
+    -ms-animation-delay:1.17s; -o-animation-delay:1.17s; -webkit-animation-delay:1.17s; }
+  #circularG_8{ left:14px; bottom:14px;
+    -moz-animation-delay:1.3s; -webkit-animation-delay:1.3s; -ms-animation-delay:1.3s;
+    -o-animation-delay:1.3s; -webkit-animation-delay:1.3s; }
+
+  @-moz-keyframes bounce_circularG{
+    0%{-moz-transform:scale(1)}
+    100%{-moz-transform:scale(.3)}
+  }
+
+  @-webkit-keyframes bounce_circularG{
+    0%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(.3)}
+  }
+
+  @-ms-keyframes bounce_circularG{
+    0%{-ms-transform:scale(1)}
+    100%{-ms-transform:scale(.3)}
+  }
+
+  @-o-keyframes bounce_circularG{
+    0%{-o-transform:scale(1)}
+    100%{-o-transform:scale(.3)}
+  }
+
+  @-webkit-keyframes bounce_circularG{
+    0%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(.3)}
+  }
+
+
+/********************** estilos para el slider ***************************************************************************/
+#sitio-malaga-extra-estado-sitio { overflow: hidden; }
+#sitio-malaga-extra-estado-sitio .swiper-slide { margin-top: 125px; }
+  #sitio-malaga-extra-estado-sitio .swiper-nav .swiper-slide,
+  #sitio-malaga-extra-estado-sitio .swiper-slide:first-child { margin-top: 0; }
+
+/* Demo Syles */
+body {
+  margin: 0;
+}
+.device {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  top:0px;
+  margin: 5px 0px;
+  position: relative;
+  z-index:9997;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing:border-box;
+}
+.arrow-left {
+  background: url(../img/sp--main.png) no-repeat -404px -308px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 40px;
+  z-index:9;
+}
+.arrow-left:hover { background-position: -404px -365px } 
+.arrow-right {
+  background: url(../img/sp--main.png) no-repeat -446px -308px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 40px;
+  z-index: 9;
+}
+.arrow-right:hover { background-position: -446px -365px } 
+.arrow-close {
+  background: url(../img/sp--main.png) no-repeat -529px -197px; 
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 31px;
+  height: 32px;
+  z-index:9;
+}
+.swiper-container {
+  height: 100%;
+  width: 100%;
+}
+.content-slide {
+  padding: 0px;
+  color: #fff;
+  width:100%;
+  height:100%;
+}
+
+/*****************destino perdedores *********************************************************************************************/
+#extra-perdedores { background: black; }
+  #extra-perdedores .main { position: absolute; top: 20px; width: 100%; }
+    #extra-perdedores .main-wrap { max-width: 1100px; margin: 0 auto; width: 100%; }
+    #extra-perdedores .main h1 { font-size: 2.8em; padding-bottom: 0.1em; }
+    #extra-perdedores .main p { line-height: 1.4em; font-size: 1.2em; }
+  #extra-perdedores .content-slide { height: auto; position: relative; }
+  #extra-perdedores img { height: auto; width: 100%; }
+  #extra-perdedores .pop { display: block; }
+  #extra-perdedores .pop-inn { width: 500px; left: -245px; }
+  #extra-perdedores  .pop-left div.pop-inn { left: -20px; }
+  #extra-perdedores  .pop-right div.pop-inn { left: auto; right: -20px; }
+    #loser-q1 { left: 80%; bottom: 63%; }
+    #loser-q2 { left: 50%; bottom: 67%; }
+    #loser-q3 { left: 95%; bottom: 70%; }
+    #loser-q4 { left: 27%; bottom: 35%; }
+    #loser-q5 { left: 39%; bottom: 65%; }
+    #loser-q6 { left: 12%; bottom: 50%; }
+    #loser-q7 { left: 72%; bottom: 41%; }
+
+#extra-sociedad-stats { background: url(../img/destino-perdedores/bg--perdedores.jpg) top center no-repeat; background-size: contain; }
+  #extra-sociedad-stats .content-slide { max-width: 1100px; margin: 0 auto; width: 100%; }
+  #extra-sociedad-stats .main { padding: 0 20px; margin: 30px auto 0 auto; }
+  #extra-sociedad-stats h2 { text-transform: uppercase; font-size: 2.3em; padding-bottom: 10px; text-shadow: 0 2px 1px black;
+      font-family: "RTVEfontSansR", Arial, Helvetica, sans-serif; }
+  #extra-sociedad-stats p { font-size: 1.1em; margin-bottom: 0.8em; } 
+.stats-main { padding: 0 4% 0 9.09%; }
+  .stats-controls-main { padding: 20px; }
+    .stats-controls-main a { display: block; background: white; color: #333; padding: 9px 36px 8px 12px; border-radius: 5px;
+        text-transform: uppercase; text-decoration: none; position: relative; background: white; }
+      .stats-controls-main a:before { display: block; content: ''; height: 25px; width: 25px; position: absolute; right: 5px; top: 3px;
+        background: url(../img/sp--main.png) no-repeat -723px -149px; }
+  .stats-controls { padding: 0 4% 0 9.09%; width: 100%; 
+      -webkit-box-sizing: border-box; box-sizing:border-box; -moz-box-sizing:border-box; }
+    .stats-controls a,
+    .stats-controls div { display: block; float: left; border-top: 5px solid white; padding-top: 12px; margin: 0 1px;
+        white-space: nowrap; text-align: center; text-transform: uppercase; color: white; font-size: 1em; }
+      .stats-ctrl-1 { width: 6.2%; }
+      .stats-ctrl-2 { width: 36.35%; }
+      .stats-ctrl-3 { width: 26.47%; }
+      .stats-ctrl-4 { width: 28.38%; }
+      .stats-ctrl-5 { width: 1.41%; }
+  .stats-years { position: relative; padding: 0 4% 0 9.09%; width: 100%; 
+      -webkit-box-sizing: border-box; box-sizing:border-box; -moz-box-sizing:border-box; }
+    .stats-years div { position: absolute; background: white; color: #333; padding: 3px 12px 1px 12px; border-radius: 5px; margin-left: -27px; }
+      .stats-yr-1 { left: 9.6%; } .stats-yr-2 { left: 14.8%; } .stats-yr-3 { left: 46.9%; } .stats-yr-4 { left: 65%; }
+      .stats-yr-5 { left: 70.1%; } .stats-yr-6 { left: 76%; } .stats-yr-7 { left: 82%; } .stats-yr-8 { left: 88%; } .stats-yr-9 { left: 93.6%; }
+  .stats-bar { height: 35px; }
+    .stats-bar-wrap { height: 8px; background: #795300; position: relative; box-shadow: 0 4px 4px black; width: 100%; 
+        -webkit-transition: width .6s ease-in;-moz-transition: width .6s ease-in; -ms-transition: width .6s ease-in;
+        -transition: width .6s ease-in;transition: width .6s ease-in;}
+      .stats-title { display: block; position: absolute; right: 100%; margin-right: 16px; width: auto; text-align: right; top: -8px; margin-top: 0; 
+          white-space: nowrap;}
+        .stats-title:hover { background: white; color: #333; border-radius: 5px; }
+        .stats-title div.pop-inn { white-space: normal; padding: 20px; text-align: left; }
+        .stats-title .pop-num { font-family: inherit; font-size: 1em; background: none; height: auto; width: auto; text-align: right; padding: 0 13px;
+            box-shadow: none!important; }
+            .stats-title.pop-top div.pop-inn { bottom: 36px; }
+  .stats-bar-1 { padding-left: 99.2%; }   .stats-bar-2 { padding-left: 87.9%; }
+  .stats-bar-3 { padding-left: 81%; }     .stats-bar-4 { padding-left: 81%; }
+  .stats-bar-5 { padding-left: 71.5%; }   .stats-bar-8 { padding-left: 43.05%; }
+  .stats-bar-6, .stats-bar-7 { padding-left: 69.5%; }   .stats-bar-9 { padding-left: 6.2%; }
+  .stats-bar-1 .stats-bar-wrap { background: #D0EBD9; }
+  .stats-bar-2 .stats-bar-wrap { background: #B6C7B0; }
+  .stats-bar-3 .stats-bar-wrap { background: #C3BD77; }
+  .stats-bar-4 .stats-bar-wrap { background: #8F930B; }
+  .stats-bar-5 .stats-bar-wrap { background: #757C13; }
+  .stats-bar-6 .stats-bar-wrap { background: #D4D192; }
+  .stats-bar-7 .stats-bar-wrap { background: #C5B065; }
+  .stats-bar-8 .stats-bar-wrap { background: #BCB334; }
+  .stats-bar-9 .stats-bar-wrap { background: #B27935; }
+  .stats-bar-10 .stats-bar-wrap { background: #795300; }
+  .stats-bar-11 .stats-bar-wrap { background: #523C31; }
+
+@media (max-width: 1000px) {
+  #extra-sociedad-stats { font-size: 0.9em; }
+  .stats-bar { height: 30px; }
+  #extra-perdedores .main { top: 10px; }
+  #extra-perdedores .main-wrap { padding: 0 10px; }
+    #extra-perdedores .main h1 { padding-bottom: 10px; font-size: 2em; }
+    #extra-perdedores .main p { line-height: 1.2em; font-size: 1em; }
+  #bl--sociedad-stats { padding: 0 20px; }
+}
+@media (max-width: 800px) {
+  .stats-years { display: none; }
+}
+/*****************EXTRA LA INQUISICION *********************************************************************************************/
+.tituloInqBig{width:100%;margin-left:5%;margin-bottom:30px;font-size:4.5em;color:white;letter-spacing:1px;text-transform:uppercase;text-shadow: 0px 0px 20px rgba(240,200,200,1);}
+.pqnace  {posicion:absolute;top:50%;background:#fff;}
+.cuadroHereje {position: relative;height: 0;padding-bottom: 63.375%;}
+.cuadroHereje img{width:100%;}
+.tooltip h6{font-size:1em;}
+.tituloInq{width:85%;margin-bottom:30px;font-size:2em;color:white;letter-spacing:1px;}
+.detalleInq{width:80%;line-height:1.3em;font-size:1.1em;margin-left:5%;}
+
+div.intro{height:100%;width:50%;display:inline;background:#000;color:white;padding:20px;padding-top:10%;
+  -webkit-box-sizing: border-box; box-sizing:border-box; -moz-box-sizing:border-box; }
+div.info{height:100%;width:50%;display:inline;background:#2f040b;color:white;padding:10% 5% 0 0;
+  -webkit-box-sizing: border-box; box-sizing:border-box; -moz-box-sizing:border-box; }
+div.imagen{width:50%;height:100%;float:left;
+    -webkit-box-sizing: border-box; box-sizing:border-box; -moz-box-sizing:border-box; }
+.bg-white{background:white}
+.cuestions { width:60px;height:60px;background-image:url(../img/question.png);z-index:9999;cursor:pointer;}
+#cuestion1 { left: 62%; top: 17%; }
+#cuestion2 { left: 72%; top: 30%; }
+#cuestion3 { left: 50%; top: 57%; }
+#cuestion4 { left: 23%; top: 48%; }
+.tooltips{position:relative;left:-100px;top:50px;width:240px;height:200px;border-top:5px solid #af212f;background:white;color:black;padding:20px;display:none;box-shadow:5px 5px 10px rgba(0,0,0,0.5);}
+
+@media (max-height: 700px) {
+.tituloInq { margin-bottom: 0; }
+div.intro { padding-top: 2%; }
+.tituloInqBig { font-size: 3em; margin-bottom: 0; }
+div.info{padding:40px 5% 0 0;}
+}
+
+/* extra principe moderno******************************************************************************************************/
+
+#batalla-lucena-extra-principe-moderno .info { margin-top:0; max-width: 800px;
+    padding:5% 5% 5% 3%;margin-left:8%;width:45%;height: 100%; background:#000; z-index: 3; }
+#batalla-lucena-extra-principe-moderno {background:url('/serie-isabel/conquista-de-granada/img/principe/bg-principe.jpg')}
+#batalla-lucena-extra-principe-moderno .swiper-container .content-slide { max-width: 1310px; margin: 0 auto; width: 85%; }
+  .pIntro { font-size:1.3em; }
+
+  h1.minor{font-size:36px; text-transform:uppercase;text-shadow: 0px 0px 20px rgba(240,200,200,1);}
+
+  #requisitos { width: 100%; text-align: center; }
+    ul#requisitos li{display: block;float: left; width: 20%;cursor: pointer!important}
+
+  #requisitos img{margin-bottom:5px;}
+  .expContenido{font-size:1.1em;line-height:1.2em; margin-bottom: 0.6em; }
+  .subtitulo{font-size:1.3em; margin-top:20px}
+  #fernando, #corona, #escudos, #cruz, #espada, #bandera {display:none;position:absolute;right:0px;top:0px;height:100%;z-index:2;}
+  #fernando{z-index:1;display:block;}
+  #expbandera, #expescudos, #expcorona, #expcruz, #expespada{display:none;position:absolute;width:90%;margin:0px}
+  #saber {margin-top: 30px; cursor: pointer!important; width: 119px; height: 113px; margin-right: 10%; display: block; color: white; background:url('/serie-isabel/conquista-de-granada/img/principe/saber-mas.png')}
+    #saber span { display:none; } 
+  #volver { position: absolute; right: 5%; top: 5%; cursor:pointer; 
+    background: url("../img/principe/volver.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 70px;
+    margin: 0 auto;
+    width: 229px;
+  }
+  #volver span { display:none; }
+  #contenido {position:absolute;z-index:12;display:none;margin-top:0;padding-top:2%;margin-left:8%;width:45%;background:#000;}
+
+@media (max-width: 1000px) {
+  #requisitos,
+  #sitio-ronda-extra-relaciones-iglesia { font-size: 0.8em; }
+  .papa-wrap { margin-top: 2em; }
+  .infoPapa { line-height: 1.2em }
+  .detalle-papa { padding: 60px 10% 20px 0; }
+  .detallePapa { overflow-y: auto; }
+}
+@media (max-width: 1000px), (max-height: 600px) { 
+  #batalla-lucena-extra-principe-moderno .tituloBig { font-size: 2em; }
+  #batalla-lucena-extra-principe-moderno .expContenido,
+  #batalla-lucena-extra-principe-moderno .pIntro { font-size: 1em; }
+  #batalla-lucena-extra-principe-moderno h2 { margin-bottom: 0; }
+}
+
+/*estilo para el tooltip ***********************************************************************/
+
+#anchorTitle {
+
+  border:1px solid black;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.5);
+  background: #F7F4EF;
+  border-top: solid 5px #af212f;
+  opacity: 0.95;
+  color: #000;
+  display: none;
+  font-size: 14px;
+  line-height: 1.3;
+  min-width:100px;
+  max-width: 180px!important;
+    padding: 5px 7px;
+  position: absolute;
+  z-index:9999!important;
+}
+
+
+/* Relaciones con la Iglesia *****************************************************************/
+.static { margin-left:0%; margin-top:0%; width:100%; height:100% }
+#sitio-ronda-extra-relaciones-iglesia {background:#f1f0ec;}
+
+.papa-wrap { width: 70%; margin: 0 15%; margin-top: 5%; position: relative; height: 400px; overflow: hidden; }
+.imagenPapa { display:block; float:left; width: 369px; overflow: hidden; position: absolute; left: 0; top: 0; z-index: 34; height: 100%; }
+  #fondomarco { position:absolute; margin-left:0%; margin-top:-1px; z-index:0 }  
+  #imagenesPapa { position: absolute; width: 369px; overflow: hidden; top: 0; left: 0; }
+    .img-papa-wrap { width: 1576px; left: 0; position: relative; background: url(../img/sp--papasprite.png) no-repeat  bottom left; height: 381px;
+      -webkit-transition: left .6s ease-in;-moz-transition: left .6s ease-in;-ms-transition: left .6s ease-in;
+      -transition: color .6s ease-in;transition: left .6s ease-in; }
+    .fotoPapa { display: block; float: left; margin-left:0%; margin-top:0%; z-index:1 }
+  #marco { position:absolute; margin-left:0%; margin-top:-1px; z-index:2 }
+
+.detallePapa { display:inline-block; float:left; height:392px; width: 100%; background:#36291e; padding-top: 2px;
+    position: absolute; right: 0; top: 0; padding-left: 369px; 
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+  .detalle-papa { padding: 40px 10% 0 0; }
+    .detallePapa h1 { text-transform: uppercase; }
+    .detallePapa p {  }
+
+
+.titRelaciones { margin-left:15%; color:#362d24; font-size:2em; text-transform:uppercase; margin-top:5%; }
+.pintroRelig { margin-left:15%; color:#362d24; font-size:1.2em; width:70%; line-height:1.2em; }
+
+.papas-controls { position: absolute; right: 10px; top: 20px; }
+  .papas-controls li { width: 36px; height: 36px; float: left; }
+    .papas-controls a { background: url(../img/sp--main.png) no-repeat -514px -79px; 
+        display: block; text-indent: -999px; overflow: hidden; height: 22px; }
+      .papas-controls a.active { background-position: -517px -108px; }
+      .papas-controls a:hover { background-position: -517px -108px; }
+
+@media (max-width: 1000px) {
+  #sitio-ronda-extra-relaciones-iglesia { font-size: 0.8em; }
+  .papa-wrap { margin-top: 2em; }
+  .infoPapa { line-height: 1.2em }
+  .detalle-papa { padding: 60px 10% 20px 0; }
+  .detallePapa { overflow-y: auto; }
+}
+
+@media (max-width: 800px) {
+  .imagenPapa { display: none; }
+  .detallePapa { padding: 0; }
+    .detalle-papa { padding: 60px 20px 20px 20px; }
+}
+/*Estado de sitio *******************************************************************************/
+
+.titEstado{color:#a8293c;font-size:5.5em;text-transform:uppercase;text-align:center;margin-top:0%;}
+.introEstado{font-size:1.3em; color:#000;text-align:center;margin-top:40px;width:50%;margin:auto;}
+.fases{font-size:1.3em;color:#fff;text-transform:uppercase;margin-left:5%;margin-top:15%;}
+.titulofase{font-size:2.5em;color:#ddd;text-transform:uppercase;margin-left:5%;text-shadow: 0px 0px 20px rgba(240,200,200,1);}
+.detallefase{font-size:1.2em;color:#fff;margin-left:5%;line-height:1.2em;width:70%;}
+.piefoto{font-size:0.9em;margin-top:20px;line-height:1em; font-family: "RTVEfontSansR", Arial, Helvetica, sans-serif; }
+
+.infoSitio{height:100%;width:50%;display:inline;background:#000;color:white;-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing:border-box;}
+
+ol li{margin:10px;margin-left:70px;padding-top:10px;width:60%;}
+.silleria{width:70%;height:auto;margin-left:25%;margin-top:15%}
+#navigation-thumbs img{width:120px;margin:0px;border-left:1px solid white;border-right:1px solid white;}
+.nro{position:absolute;top:0;left:0;width:120px;height:75px;text-align:center;color:white;font-size:2.5em;padding-top:15px;}
+
+.mask{background:rgba(135,40,55,0.6);position:absolute;top:0;left:0;width:120px;height:75px;border-left:1px solid white;}
+
+
+/* estilo para el swiper del Estado de Sitio *************************************************************************/
+
+
+
+.swiper-content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.swiper-content .inner {
+  padding: 20px;
+}
+
+.swiper-container.swiper-nav{position:absolute;width:100%;margin:0%; }
+.swiper-nav {
+  height: 125px;
+  position: absolute;
+  bottom: -130px;
+  width: 100%;
+  cursor:default!important;
+
+
+}
+.swiper-nav .swiper-slide {
+  width: 121px!important;
+  height: 125px;
+  text-align: center;
+  position: relative;
+  background:#ffffff;
+  margin:0px;padding:0px;
+}
+.swiper-nav .swiper-slide:first-child{width:0px!important}
+
+.swiper-nav .active-nav {
+  background: #a8293c;
+}
+
+.swiper-nav .swiper-wrapper {
+  width:90%;
+  margin: 0 auto;
+}
+.swiper-nav img {
+  width: 120px;
+  height: 80px;
+}
+.swiper-nav .title {
+  margin-top: -10px;
+  padding-top:10px;
+  font-size: 1.1em;
+  position: absolute;
+  color:#111111;
+  background:#fff;
+  width:121px;
+  height:30px;
+  white-space: nowrap;
+  text-transform:uppercase;
+}
+
+div.title:last-child{border-right:1px solid white}
+.swiper-slide.last{width:122px!important}
+
+.swiper-slide { position: relative; overflow: hidden; }
+
+/* margins******************************************************************************/
+.ml5{margin-left:5%}
+.ml10{margin-left:10%}
+.ml15{margin-left:15%}
+.ml20{margin-left:20%}
+.ml25{margin-left:25%}
+.mt5{margin-top:5%;}
+.mt10{margin-top:10%;}
+.mt15{margin-top:15%;}
+.mt20{margin-top:20%;}
+
+.dcha{float:right;}
+.izda{float:left;}
+
+
+/*Inquisición *******************************************************************************/
+#toma-zahara-extra-inquisicion .swiper-container .imagen img { width: 90%; height: auto; }
+#toma-zahara-extra-inquisicion .swiper-container .fullw-imagen img { width: 100%; height: auto; }
+@media (max-width: 1000px) {
+  #toma-zahara-extra-inquisicion { font-size: 0.8em; }
+}
+
+/* El papel de Isabel *******************************************************************************/
+.bl-papel-main { height: 100%; text-align: center; }
+  .bl-papel-main .wrap-table { width: 100%; }
+  .bl-papel-main .tituloBig { margin: -20px 0 240px 0; font-size: 4.5em; color: white; letter-spacing: 1px; text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(240,200,200,1); }
+  .bl-papel-main p { margin: 0 15%; font-size: 1.2em; margin-bottom: 1em; }
+.bl-papel-cuadro { position: absolute; z-index: 2; width: 220px; height: 220px; margin-left: -110px; margin-top: -110px; top: 50%; left: 50%; overflow: hidden;
+      -webkit-transition: all .3s ease-in;-moz-transition: all .3s ease-in;-ms-transition: all .3s ease-in; 
+      -transition: all .3s ease-in;transition: all .3s ease-in; 
+      -webkit-border-radius: 110px; border-radius: 110px; }
+    .bl-papel-cuadro-act { width: 100%; height: 100%; top: 0; left: 0; margin: 0; background: black;
+      -webkit-border-radius: 0; border-radius: 0;}
+    .bl-papel-cuadro .cuadro-info-butt { display: none; }
+    .bl-papel-cuadro-act .cuadro-info-butt { display: block; }
+  .bl-papel-cuadro-wrap { position: relative; 
+      -webkit-transition: all .3s ease-in;-moz-transition: all .3s ease-in;-ms-transition: all .3s ease-in; 
+      -transition: all .3s ease-in;transition: all .3s ease-in;  }
+    .bl-papel-cuadro-act .bl-papel-cuadro-wrap { margin-left: 0!important; }
+  .bl-papel-cuadro img { width: 100%; height: auto; }
+
+@media (max-height: 850px) {
+  .bl-papel-main .tituloBig { margin-bottom: 220px; font-size: 3em; line-height: 0.9em; 
+      position: relative; top: 20px; }
+  .bl-papel-main p { font-size: 1em; }
+}
+
+/* Reestructuracion de la nobleza 
+********************************************* */
+
+#batalla-alhama-extra-reestructuracion-nobleza { width: 100%; }
+
+  #batalla-alhama-extra-reestructuracion-nobleza .swiper-container { width: 100%; } 
+  #reestructuracion-nobleza-paso-3 .content-slide,
+  #reestructuracion-nobleza-paso-4 .content-slide, 
+  #reestructuracion-nobleza-paso-5 .content-slide,
+  #reestructuracion-nobleza-paso-2 .content-slide { max-width: 1310px; margin: 0 auto; width: 85%; }
+
+#batalla-alhama-extra-reestructuracion-nobleza .tooltip { background: white; color: black; padding: 5px }
+  #batalla-alhama-extra-reestructuracion-nobleza .tooltip h1 { text-transform: bold; padding-bottom: 5px; }
+  #batalla-alhama-extra-reestructuracion-nobleza .tooltip p { padding-top: 5px; }
+
+/* Reestructuracion de la nobleza: Paso 1;
+********************************************* */
+  #reestructuracion-nobleza-paso-2 { }
+
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2 .titulo { font-size: 60px; text-transform: uppercase; padding-top: 40px; 
+          text-shadow: 0 0 20px #F0C8C8; text-align: center; }
+  
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2  .nobles { display: inline-block; width: 100%; padding-top: 40px; 
+    background: url(../img/relaciones-iglesia/isabel.jpg) no-repeat center center;  }
+    
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes { display: block; float: left; width: 40%; }
+      #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos { width: 500px; height: 250px; position: absolute;}
+        #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-ducado-bejar { top: 60px; }      
+        #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-marques-villena { top: 60px; }
+        #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-escudo-alcantara { top: 60px; }
+        #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-escudo-carrillo { top: 60px; }
+          #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-escudo-carrillo .img-noble { display: block; float: left; width: 126px;}
+          #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-escudo-carrillo .texto { display: block; float: left; padding: 5px}
+        #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-marques-cadiz { top: 60px; }
+        #reestructuracion-nobleza-paso-2  .nobles .nobles-rebeldes .nobles-rebeldes-textos .noble-rebelde-cruz-calatrava { top: 60px; }
+
+    #reestructuracion-nobleza-paso-2  .nobles .nobles-fieles{ display: block; float: right; width: 40%; position: relative; }
+    
+    .nobles .row { display: inline-block; width: 100%; }
+      .nobles .row .escudo-noble { display: block; position: relative; float: left; width: 33%; padding: 20px;
+          -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+      .nobles .row .rollo { display: block; width: 229px; height: 70px; margin: 0 auto; background: url(../img/relaciones-iglesia/rollo.png) no-repeat 0 0; }
+      .nobles .row .rollo span { display: inline-block; text-align: center; margin-top: 28px; width: 229px; }
+
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2  .texto{ display: block; width: 100%; padding-top: 20px; }
+
+/* Reestructuracion de la nobleza: Paso 2;
+********************************************* */
+
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .content-slide { display: block; width: 100%; position: relative; }
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .mapa { float: left; width: 70%; height: auto; margin: 40px; position: relative; }
+  .mapa .mapa-ordenes{ width: 100%; height: 100%; position: absolute; }
+    #reestructuracion-nobleza-paso-3 .mapa img { width: 100%; height: auto; }   
+
+  #reestructuracion-nobleza-paso-3 .ordenes .orden-militar { position: absolute; width: 94px; }
+    .ordenes #orden-alcantara { top: 44%; left: 6%; } 
+    .ordenes #orden-calatrava { top: 38%; left: 30%; } 
+    .ordenes #orden-santiago { top: 35%; left: 53%; } 
+    .ordenes #orden-montesa { top: 27%; left: 72%; } 
+
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .ordenes span{ display: inline-block; width: 94px; text-align: center;
+        font-size: 0.7em; display: block; top: -20px; position: absolute; top: 84px; }  
+
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .ordenes #texto-orden-alcantara { top: 1%; left: 1%;  position: absolute; width: 530px; } 
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .ordenes #texto-orden-calatrava { top: 1%; left: 1%; position: absolute; width: 530px; } 
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .ordenes #texto-orden-santiago { top: 1%; left: 1%; position: absolute; width: 530px; } 
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .ordenes #texto-orden-montesa { top: 0%; left: 25%; position: absolute; width: 600px; }     
+
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-3 .texto { position: absolute; width: 33%; right: 0; top: 0; 
+      display: block; z-index: 21; height: 200px; margin-top: 60px; }  
+  #reestructuracion-nobleza-paso-3 .texto h1 { font-size: 36px; text-transform: uppercase; padding-top: 40px; }
+  #reestructuracion-nobleza-paso-3 .texto p { font-size: 18px; padding-top: 20px; }
+
+/* Reestructuracion de la nobleza: Paso 3;
+********************************************* */
+
+
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-4 .content-slide { display: block; width: 90%; padding-top: 40px; }
+  
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-4 .content-slide .titulo { font-size: 36px; text-transform: uppercase; padding-top: 20px; } 
+  
+    .wrapper-santa-hermanadad { width: 50%; float: left; padding: 40px 5% 0 5%; 
+      padding: 40px 5% 0 5%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box}
+      .wrapper-santa-hermanadad img { width: 100%; height: auto; }
+    
+    #reestructuracion-nobleza-paso-4 .texto { float: right; width: 50%; 
+      padding: 40px 5% 0 5%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } 
+
+
+/* Reestructuracion de la nobleza: Paso 4;
+********************************************* */
+
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide { display: block; width: 90%; padding-top: 40px; }
+    
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .titulo { font-size: 36px; text-transform: uppercase; padding-top: 40px; }
+    
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .texto-intro { padding-top: 40px; }
+    
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .wrapper-nobles-cuadros { padding-top: 40px; width: 1050px; margin: 0 auto;}
+      #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .wrapper-nobles-cuadros .noble { display: block; float: left; width: 210px; }
+    #reestructuracion-nobleza-paso-5 .noble img { -webkit-transition: all 2s;-moz-transition: all 2s;-ms-transition: all 2s;
+        -o-transition: all 2s;transition: all 2s;  }
+    #reestructuracion-nobleza-paso-5 .noble:hover img { -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg); -o-transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+      #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .wrapper-nobles-cuadros .noble span { display: inline-block; width: 210px; text-align: center; font-size: 16px; padding-top: 10px;}
+    
+    #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .wrapper-nobles-textos { display: inline-block; width: 100%; padding-top: 40px; }
+      #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .wrapper-nobles-textos h1 { padding-top: 40px; font-size: 22px; font-weight: bold; }
+      #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-5 .content-slide .wrapper-nobles-textos p { font-size: 18px;  padding-top: 20px;}
+
+@media (max-width: 1000px), (max-height: 700px) {
+  #batalla-alhama-extra-reestructuracion-nobleza .texto { font-size: 0.9em; }
+  .nobles .row .escudo-noble { padding: 5px; }
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2 .titulo { font-size: 3em; padding: 10px 0 0 0; }
+  #batalla-alhama-extra-reestructuracion-nobleza  h2 { padding: 0 }
+    #reestructuracion-nobleza-paso-3 .texto p { font-size: 1em; }
+}
+
+
+#avanza-granada-isabel {  font-size: 1.5em; left: 22%; position: absolute; top: 90%; z-index: 10; }
+  #avanza-granada-isabel:before { display: block; content: ''; height: 50px; width: 100px; position: absolute; right: -80px; top: 10px;
+    background: url(../img/sp--main.png) no-repeat -208px -183px; }
+
+#toma-granada-paso-2 .map-wrap-steps-end { width: 15%; }
+
+/* Expulsion de los Judios 
+********************************************* */
+
+#toma-granada-extra-judios { width: 100%; }
+
+  #toma-granada-extra-judios .swiper-container { width: 100%; } 
+  #toma-granada-extra-judios .swiper-container .content-slide { max-width: 1310px; height:auto;margin: 0 auto; padding: 0 40px 0 40px; 
+    -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; }
+
+/* Expulsion de los Judios: Paso 1;
+********************************************* */
+
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-1 .titulo { font-size: 55px; text-transform: uppercase; padding-top: 80px;
+    text-shadow: 0px 0px 20px rgba(240,200,200,1); }
+
+    #toma-granada-extra-judios .swiper-container #toma-granada-extra-judios-paso-1 .content-slide .intro-extra-judios { display: block; float: left; width: 50%; }
+.fragmento-audio .fragmento-audio-img  { display: block; float: left;  
+            width: 46px; height: 46px; background: url(../img/sp--main.png) -526px -139px; }
+      .fragmento-audio.player-playing .fragmento-audio-img { background-position: -526px -398px; }
+    #player-alhama { display: block; margin-top: 20px; color: black;  float: right; }
+      #player-alhama .fragmento-audio-texto { display: block; float: left; width: 220px; padding-right: 20px; padding-top: 12px; padding-left: 20px; line-height: 1.2em; }
+    #player-judios { display: block; margin-top: 20px; color: white; }
+    .img-intro-extra-judios {display: block; float: right; position: absolute; bottom: 0; right: 0; z-index: -1;
+     width: 50%; height: 100%; }
+     .img-intro-extra-judios img { width: 100%; height: auto; position: absolute; bottom: 0;}
+  #toma-granada-extra-judios-paso-1 { overflow: hidden; }
+
+/* Expulsion de los Judios: Paso 2;
+********************************************* */
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .titulo { padding-top: 40px;margin-bottom:0px;width:85%;margin-left:12%}
+    #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .titulo h2 { font-size: 2em; text-transform: uppercase; padding-bottom: 20px;margin-left:0%;margin-top:0px;}
+    #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .titulo p { font-size: 1.1em;margin-left:0%;padding-bottom: 20px;width:100%;font-size:1.1em;}
+
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .texto { padding-top: 40px; font-size: 1em;color:#211803;text-shadow:0px 0px 5px rgba(150,150,0,0.2); }
+     #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .texto p.italico{font-style:italic}
+
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .pergaminos { width: 100%;height:100%;}
+    #toma-granada-extra-judios .pergamino { width: 60%;  height:100%; }
+    #toma-granada-extra-judios .pergaminos .left {height:600px;position:relative;z-index:2;display:inline;top: 15px; width:50%;background: url(../img/expulsion-judios/pergamino.png) no-repeat 0 0;background-size:contain;float:left;}
+    #toma-granada-extra-judios .pergaminos .left p:first-child, #toma-granada-extra-judios .pergaminos .right p:first-child{padding-top:50px;}
+        #toma-granada-extra-judios .pergaminos .left  p:last-child, #toma-granada-extra-judios .pergaminos .right p:last-child{padding-bottom:150px;}
+    #toma-granada-extra-judios .pergaminos .right {height:600px;position:initial;z-index:1;display:inline;float:left;margin-left:-8%; margin-top:6%;width:50%;background: url(../img/expulsion-judios/pergamino.png) no-repeat 0 0;background-size:contain;}
+    #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .pergaminos .pergamino p {line-height:1em; font-size:1em;width: 68%; margin-left:10%;margin-right:15%;padding-left: 20px; color: black;}
+
+@media (max-width: 1000px) {
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2 .titulo { font-size: 1.3em; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .texto { padding-top: 0; font-size: 0.9em; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .pergaminos .pergamino p { width: 75%; margin-left: 5%; }
+  #batalla-alhama-extra-reestructuracion-nobleza #reestructuracion-nobleza-paso-2 .texto h1 { padding-bottom: 5px; }
+}
+/* Expulsion de los Judios: Paso 3;
+********************************************* */
+
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 .content-slide { max-width: inherit; width: 100%; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 .cuadroAbrahanSeneor { height: 0; padding-bottom: 58%; position: absolute; bottom: 0; }
+    #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 .cuadroAbrahanSeneor img { width: 100%; position: absolute; bottom: 0; left: 0; height: auto; }
+
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 .cuadroAbrahanSeneor .pop { display: block;}
+    #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 .cuadroAbrahanSeneor .pop p{ padding-bottom: 5px;}
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 #tooltipAbrahanSeneor1 { left: 15%; top: 40%; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 #tooltipAbrahanSeneor2 { left: 72%; top: 40%; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-3 #tooltipAbrahanSeneor3 { left: 50%; top: 60%; }
+
+/* Expulsion de los Judios: Paso 4;
+********************************************* */
+
+  #map-judios { position: relative; width: 100%; }
+    .map_judes {position:absolute;left:110px;top:110px;z-index:1!important}
+    #paises {position:absolute;left:0px;top:0px;width:100%;height:100px;text-align:left}
+      #paises h2{padding-left:100px;font-size:40px;padding-top:60px;color:black}
+      p.descrip_map{font-size:1em;padding-left:100px;width:250px;color:#444}
+      .link_map_jude{width:250px;height:32px;padding:5px;margin:-16px;text-align:left;background:#400808;color:white;font-size:1em;line-height:1em;box-sizing:border-box;-moz-box-sizing:border-box;}
+
+
+.link_map_jude2 { 
+        background:transparent!important;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 16px solid #480008; 
+        position: relative;
+        top: -16px;
+        left: 234px;
+        margin-bottom:2px;
+      }
+svg#expulsion {margin-top:-20px}
+
+@media (max-width: 1200px){
+  #toma-granada-extra-judios .pergaminos .right p,  #toma-granada-extra-judios .pergaminos .left p{margin-left:25%;width:50%;}
+}
+
+@media (max-width: 1000px){
+  #toma-granada-extra-judios .pop-inn { width: 450px; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-1 .titulo { font-size: 3em; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .pergamino p { font-size: 14px; }
+}
+@media (max-width: 900px){
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .pergamino p { font-size: 12px; }
+  #toma-granada-extra-judios #toma-granada-extra-judios-paso-2 .pergamino { padding-top: 24px; }
+}
+
+
+
+
+/* EXtra de Artilleria ******************************************************************************************************/
+
+
+#batalla-alora-extra-artilleria .swiper-slide {background:url('/serie-isabel/conquista-de-granada/img/artilleria/background.jpg')}
+
+.titArtilleria { margin-left:20%; color:#373129; font-size:4.5em; text-transform:uppercase; margin-top:5%; }
+.leftArti{width:40%;float:left;margin-left:18%}
+.rightArti{width:40%;float:left}
+.infodoble{width:75%;float:left;}
+.infoCaract{margin-left:20%;width:35%;float:left;display:inline;}
+.calibre{position:absolute;right:10%;width:20%;color:#222;}
+.subtitArtilleria { margin-left:20%; color:#373129; font-size:2.5em; text-transform:uppercase; margin-top:5%; }
+h3.subtitDestruir{text-transform:uppercase;color:#222;font-size:1.2em;margin-top:30px;margin-left:0px;margin-bottom:-10px;}
+p.intro { margin-left:20%; color:#362d24; font-size:1.1em; width:60%; line-height:1.2em; }
+p.infoArt{font-size:1em;color:#222;line-height:1.1em;width:50%;font-size:1.1em; }
+p.infoPedrero{font-size:1.6em;color:#222;line-height:1.1em;margin-top:50px;margin-left:-10px;width:70%;}
+p.infoPasa{font-size:1em;color:#222;line-height:1.1em;margin-top:20px;margin-left:20px;width:70%;margin-bottom:0px;}
+.municion{position:absolute;right:20%;width:20%;margin-top:-100px;color:#222;}
+img.lombarda { margin-left:15%; margin-top:50px; width:80%;height:auto; }
+img.pedrero { float:left;margin-left:-25%; margin-top:50px; width:100%;height:auto; }
+img.ribadoquin{ float:left;margin-left:-15%; margin-top:50px; width:100%;height:auto; }
+span.caracteristicas{font-weight:bold;}
+.infomortero {width:30%;float:left;margin-left:25%;}
+.mortero{width:30%;float:left;display:inline;}
+.bombardeta {width:80%;display:block;margin-left:26%;margin-bottom:50px;margin-top:50px;height:auto;}
+.lombardas{margin-left:30%; margin-top:50px; width:75%;height:auto;display:block;}
+
+
+/*****************la granada de isabel *********************************************************************************************/
+
+
+
+
+
+
+  #extra-granada-isabel-paso-1 .pop { display: block; }
+  #extra-granada-isabel-paso-1 .pop-inn { width: 500px; left: -245px; }
+  #extra-granada-isabel-paso-1  .pop-left div.pop-inn { left: -20px; }
+  #extra-granada-isabel-paso-1  .pop-right div.pop-inn { left: auto; right: -20px; }
+
+#extra-granada-isabel { background: black; height: 100%!important; }
+
+  #extra-granada-isabel .title { background-color: #FFF; color: #000; border-top: 5px solid #af212f; opacity:0.95; position: absolute; z-index: 1; top: 19%; width: 40%; left: 11%; }
+  #extra-granada-isabel .title .title-wrap { margin: 5px;}
+  #extra-granada-isabel .title .title-wrap h1{ }
+  #extra-granada-isabel .title .title-wrap p{ margin: 5px; line-height: 1.2em;}
+
+  #extra-granada-isabel .main { width: 100%; }
+    #extra-granada-isabel .main-wrap { max-width: 1100px; margin: 0 auto; width: 100%; }
+    #extra-granada-isabel .main h1 { font-size: 4em; padding-bottom: 0.1em; color:#000; margin-left:25% margin-top:5%;}
+    #extra-granada-isabel .main p { line-height: 1.4em; font-size: 1.2em; }
+  #extra-granada-isabel .content-slide { position: relative; }
+  #extra-granada-isabel img { height: auto; width: 100%;  }
+  #extra-granada-isabel .cuadro-wrap { height: auto; width: 100; position: relative; margin-top:-12%;}
+    #granada-v1 { left: 63%; bottom: 63%; }
+    #granada-v2 { left: 54%; bottom: 69%; }
+    #granada-v3 { left: 75%; bottom: 66%; }
+    #granada-v4 { left: 78%; bottom: 71%; }
+    #granada-v5 { left: 82%; bottom: 71%; }
+    #granada-v6 { left: 26%; bottom: 58%; }
+    #granada-v7 { left: 34%; bottom: 55%; }
+    #granada-v8 { left: 59%; bottom: 33%; }
+    #granada-v9 { left: 56%; bottom: 31%; }
+    #granada-v10 { left: 53%; bottom: 33%; }
+    #granada-v11 { left: 50%; bottom: 33%; }
+    #granada-v12 { left: 54%; bottom: 26%; }
+    #granada-v13 { left: 65%; bottom: 25%; }
+
+    #extra-granada-isabel-paso-1 .cuadro-info-butt{ bottom:-150px; left:100px;}
+
+#extra-granada-isabel-paso-1 .pop .pop-inn { opacity:1; z-index: 1111111;}
+
+/*****************la granada de isabel *********************************************************************************************/
+
+#extra-reconquista { background: black; height: 100%!important; }
+  #extra-reconquista .main { width: 100%; }
+    #extra-reconquista .main-wrap { max-width: 1100px; margin: 0 auto; width: 100%; }
+    #extra-reconquista .titGrad{position:absolute;bottom:0px;left:0;padding:15px;height:auto;padding-left:80px;background:rgba(0,0,0,0.4) }
+        #extra-reconquista .titGrad h2{color:#eee;font-weight:bold;font-size:2.5em}
+        #extra-reconquista .titGrad p{width:90%;color:white;font-size:1.1em}
+    #extra-reconquista .main h1 { font-size: 4em; padding-bottom: 0.1em; color:#000; margin-left:25% margin-top:5%;}
+    #extra-reconquista .main p { line-height: 1.4em; font-size: 1.2em; }
+  #extra-reconquista .content-slide { position: relative; }
+  #extra-reconquista img { height: auto; width: 100%; }
+  .cuadro-wrap { height: auto; width: 100; position: relative; }
+  #extra-reconquista .cuadro-info-butt{ top:50px; left:50px;}
+
+@media (max-height: 800px) {
+  .help .help-bottom, .paso-title .help-bottom { padding-bottom: 10px; }
+  .help .help-bottom:before, .paso-title .help-bottom:before { top: 0px; }
+  .help .help-right { padding-bottom: 10px; }
+}
+@media (max-height: 800px) {
+  .menu-main li { height: 40px; }
+  .menu-main .titulo { margin-bottom: 10px; }
+  .menu-main .titulo:before, .menu-main li:before { display: none; }
+  #initial-paso-1 .main { display: none }
+  #initial-paso-1 .paso-title h1 { font-size: 1.4em; }
+}
+@media (max-height: 640px) {
+  .menu-main { line-height: 0.7em; }  
+  .menu-main li { height: 30px; }
+}
+
+/*
+ * Swiper - Mobile Touch Slider CSS
+ * http://www.idangero.us/sliders/swiper
+ *
+ * Vladimir Kharlampidi, The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Copyright 2012-2013, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us
+ *
+ * Licensed under GPL & MIT
+ *
+*/
+
+/* ===============================================================
+Basic Swiper Styles 
+================================================================*/
+.swiper-container {
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  backface-visibility:hidden;
+  /* Fix of Webkit flickering */
+  z-index:1;
+}
+.swiper-wrapper {
+  position:relative;
+  width:100%;
+  height:100%;
+  -webkit-transition-property:-webkit-transform, left, top;
+  -webkit-transition-duration:0s;
+  -webkit-transform:translate3d(0px,0,0);
+  -webkit-transition-timing-function:ease;
+  
+  -moz-transition-property:-moz-transform, left, top;
+  -moz-transition-duration:0s;
+  -moz-transform:translate3d(0px,0,0);
+  -moz-transition-timing-function:ease;
+  
+  -o-transition-property:-o-transform, left, top;
+  -o-transition-duration:0s;
+  -o-transform:translate3d(0px,0,0);
+  -o-transition-timing-function:ease;
+  -o-transform:translate(0px,0px);
+  
+  -ms-transition-property:-ms-transform, left, top;
+  -ms-transition-duration:0s;
+  -ms-transform:translate3d(0px,0,0);
+  -ms-transition-timing-function:ease;
+  
+  transition-property:transform, left, top;
+  transition-duration:0s;
+  transform:translate3d(0px,0,0);
+  transition-timing-function:ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.swiper-slide {
+  float: left;
+  height:100%;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+}

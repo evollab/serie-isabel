@@ -1,0 +1,542 @@
+/* ___-_ main elements _-________________ *//* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  margin: 0; padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: '';  content: none; } table {  border-collapse: collapse; border-spacing: 0; }
+
+html, body, #container { height: 100%; width: 100%; margin: 0; padding: 0; }
+body {margin:0;padding:0;background:#ffffff; color: #515151;font-family:"RTVEfontR", Arial, Helvetica, sans-serif; font-size:16px; position:relative; height:100%}
+.touch * { -webkit-transition: none!important;-moz-transition: none!important;-ms-transition: none!important;
+           -transition: none!important;transition: none!important; }
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../font/fontawesome-webfont.eot?v=3.2.0');
+    src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=3.2.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=3.2.0') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ___-_ main elements _-________________ */
+h1 { font-size: 1.75em; line-height: 1.2em; }
+h1{ padding-bottom: 20px; font-size: 1.75em; line-height: 1.2em; color: #565658;}
+h2{ padding-bottom: 20px; font-size: 1.75em; line-height: 1.2em; }
+h3{ padding-bottom: 20px; font-size: 1.25em; line-height: 1.2em; }
+h4{ padding-bottom: 10px; font-size: 1.25em; line-height: 1.2em; }
+h5{ padding-bottom: 10px; font-size: 1.5em; line-height: 1.1em; }
+h6{ padding-bottom:  8px; font-size: 1.1em; line-height: 1.1em; }
+
+a { text-decoration: underline; color: #888888;
+    -webkit-transition: color .3s ease-in;-moz-transition: color .3s ease-in;-ms-transition: color .3s ease-in;
+    -transition: color .3s ease-in;transition: color .3s ease-in; }
+a:hover { color: black; }
+a.block { display: block; height: 100%; width: 100%; }
+
+p { padding-bottom: 1.2em; }
+
+.ft-awesome { font-family: 'FontAwesome'; }
+
+/* ___-_ workers _-________________ */
+.inline{display:inline;}
+.wrapper { width: 960px; margin: 0 auto; }
+/* Media elements, image + text */
+.wk-media-l { float:left; }
+.wk-media-l img,
+.wk-media-r img { display:block; }
+.wk-media-r { display:table-cell; zoom:1; }
+.wk-valign { display: table; vertical-align: middle; background: rgba(0,0,0,0.2); height: 100%; width: 100%; }
+.wk-valign-cont { display: table-cell; vertical-align: middle; text-align: center; }
+
+/* Columns */
+.wk-col-l { display:inline; float:left; }
+.wk-col-r { display:inline; float:right; }
+.wk-col-3 { display:inline; width: 320px; float: left; margin-bottom: 10px; }
+.node-page .wk-col-3 { margin-bottom: 10px; }
+.node-page .wk-col-3 h2 { padding-bottom:  5px; }
+.wk-col-33 { width: 33%; }
+.wk-cent { text-align: center; }
+.wk-right { text-align: right; }
+
+/* Class for hidding elements if JavaScript is enabled */
+html.js body .hidden { display:none; }
+
+/* Clearfix trick to clear floated elements */
+.clearfix:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
+.clearfix { display:inline-block; } html[xmlns] .clearfix { display:block; }* html .clearfix { height:1%; }
+
+/* ___-_ layout _-________________ */
+#lab-header { width:100%; top: 0; left: 0; z-index: 999; background: #1c1c1c; text-align: center; font-size: 13px; position: fixed; }
+#lab-header .logo { float: left; width: 25%; height: 30px; padding: 4px 0 0 10px; padding: 0; position:relative; 
+                    background: url("../img/rtvelab.png") 0 0 no-repeat; }
+#lab-header .logo a { display:block; height: 100%; width: 100%; text-indent: -999px; overflow: hidden;}
+
+#lab-header #menu { display: block; margin: 0; padding: 0; line-height: 30px; float: left; height: 30px; width: 55%;
+                    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+#lab-header #menu a { color:#c2c1c1; text-decoration:none; padding:0  8px; text-transform: uppercase; }
+#lab-header #menu a:hover {  color:#ffffff;}
+#lab-header #menu ul { background: #222222; width: 200px; margin: 0 auto; }
+#lab-header #menu li {  height: 0; display:block; margin:0; padding:0; list-style:none; color:#c2c1c1; overflow: hidden;
+                        -webkit-transition: height .3s ease-in;-moz-transition: height .3s ease-in;-ms-transition: height .3s ease-in;
+                        -transition: height .3s ease-in;transition: height .3s ease-in; }
+#lab-header #menu:hover li { height: 20px; }
+#lab-header #menu li a { display: block; padding-bottom: 10px; line-height: 1em; }
+
+@media all and (min-width: 800px) {
+    #lab-header .logo { width: 10%; }
+    #lab-header #menu { width: 90%; padding-right: 80px; }
+    #lab-header #menu .menu-main { display: none; }
+    #lab-header #menu ul { width: auto; height: 20px; overflow: hidden; }
+    #lab-header #menu li { height: 20px; display: inline; }
+    #lab-header #menu li a { display: inline; position: relative; }
+    #lab-header #menu li a:before { display: block; content: '|'; position: absolute; left: -10px; top: 0; padding-left: 5px; }
+    #lab-header #menu li:first-child a:before { display: none; }
+}
+
+#lab-header .social-lockup {pointer-events: all; float: right; position:absolute; top:6px; right:10px; }
+#lab-header .social-lockup a { background: url("../img/sp--lab.png") top left no-repeat;
+                               text-indent: -999px; overflow: hidden;
+                               width: 16px; height: 15px; cursor: pointer; float: left; margin:0 0 0 8px; }
+#lab-header .social-lockup .social-fbook { background-position: 0 -40px }
+#lab-header .social-lockup .social-twitter { background-position: 0 -73px; }
+
+#lab-footer { float: left; display :inline; width:100%; margin:30px 0 0 0; padding:0; position: absolute;z-index: 3;
+              background: #222222; font-size:13px; text-align:center; }
+#lab-footer ul { display:inline; margin:0; padding:0; width:100%; float:left; line-height:25px;}
+#lab-footer ul li { display:inline; margin:0; padding:0 5px 0 0; list-style:none; color:#c2c1c1;}
+#lab-footer ul li a { color:#c2c1c1; text-decoration: none; padding: 0 5px}
+#lab-footer ul li a:hover { text-decoration: underline; } 
+#lab-footer.lab-footer-fixed { position: fixed; bottom: 0 }
+
+/*___-_ isabel app _-________________*/
+body { overflow: hidden; }
+#preload, #no-preload { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: table; background: white; z-index: 998; }
+#preload #pre-wrap, #no-preload #pre-wrap { display: table-cell; vertical-align: middle; text-align: center; }
+
+.main-title { font-size: 1.8em; position: absolute; top: 14px; left: 410px; }
+
+#isabel-menu { height: 80px; background: white; top: 25px; position: absolute; width: 100%; overflow: hidden; z-index: 10;
+               display: block; padding: 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+               -webkit-box-shadow: 0px 5px 7px black; box-shadow: 0px 5px 7px black; }
+#isabel-menu .logo { display: block; width: 245px; height: 48px; text-indent: -889px; overflow: hidden; margin-right: 50px; 
+                     background: url(../img/img-isabel-logo.jpg) no-repeat; z-index: 1; }
+.isb-links { margin-top: 16px;  position: absolute; width: 100%; display: block; overflow: hidden; height: 20px; z-index: 0;
+             text-align: center; padding-left: 270px; padding-right: 240px; text-align: center;
+             -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.isb-links li { display: inline; padding: 0 15px; border-left: 2px solid #888888; }
+.isb-links li:first-child { padding: 0 15px 0 0; border-left: 0; }
+.isb-links a { text-decoration: none; text-transform: uppercase; line-height: 1.4em; }
+.isb-links a.active { color: black; }
+.isb-links a.active:hover { text-decoration: none; }
+@media all and (max-width: 700px) {
+    .isb-links { display: none; }
+}
+
+#preload, #no-preload { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: table; background: white; z-index: 998; }
+#preload #pre-wrap, #no-preload #pre-wrap { display: table-cell; vertical-align: middle; text-align: center; }
+#loader { position: absolute; height: 1px; width: 1px; overflow: hidden; }
+
+#main, #main-main { position: absolute; top: 0; display: block; height: 100%; width: 100%; padding-top: 110px; padding-bottom: 28px; overflow: auto;
+                    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+                    -webkit-transform: translateZ(0); -o-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); }
+#main { padding: 0; position: relative; overflow: auto; }
+.main-wrap { width: 1400px; height: 1210px; position: relative; margin: 0; padding: 0; }
+@media (min-width: 1440px) {
+    .main-wrap { margin: 0 auto; }
+}
+#sferas-raphael { pointer-events: none; }
+#sferas-raphaelstatics, #sferas-raphaelstatics-chaps { position: absolute; top: 0; left: 0;-webkit-transition: 0.4s; z-index: 2;
+                                                       -moz-transition: 0.4s; -ms-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s; pointer-events: none; }
+svg .in-chapter { -webkit-transition: 0.4s; z-index: 3; cursor: pointer; pointer-events: all;
+                  -moz-transition: 0.4s; -ms-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s; }
+
+#tooltip { position: absolute; z-index: 5; border: 1px solid #333; box-shadow: black 1px 1px 10px -4px;
+           margin: 0 40px; background-color: white; text-align: center; }
+#tooltip p { padding: 10px 10px 6px 10px; text-align: left; }
+#tooltip a { display: block; background: #dd1442; color: white; padding: 10px; }
+
+/* search list */
+#characters-search { width: 100%; height: 100%; position: absolute; margin: 0 auto; background: white; background: rgba(255,255,255,0.9); z-index: 5; }
+.char-srch-wrap { width: 989px; margin: 80px auto 0 auto; position: relative; 
+                  padding: 15px 30px 30px 30px; background: #F2F2F2; border: 1px solid  #e9e9e9; }
+.char-srch .bl-characters { height: 520px; overflow-y: scroll; clear: both; }
+.char-srch .bl-char { margin: 0 10px 10px 0; cursor: pointer; }
+.char-srch .bl-char .char-srch-text { height: 34px; width: 174px; overflow: hidden; padding: 5px; }
+.char-srch .bl-char .char-srch-text p { padding-bottom: 0; }
+.char-srch .bl-char img { border-radius: 0; border: 0; width: 184px; height: 184px; display: block; }
+.char-srch .bl-char:hover img {border: 4px solid #333; width: 176px; height: 176px; }
+.char-srch-list .bl-char { margin: 0 10px 5px 0; }
+.char-srch-list .bl-char .char-srch-text{ width: 204px }
+.char-srch-list .bl-char img { float: left; width: 60px; height: 60px; }
+.char-srch-list .bl-char:hover img { border: none; width: 60px; height: 60px; }
+
+.bl-toggler { display: block; padding: 20px 0;
+              background: url(../img/sp-isabel-cuadro.png) no-repeat 61px -31px; position: relative; }
+.bl-toggler:active { top: 0; }
+.bl-toggler:before { content: ''; display: block; position: absolute; width: 20px; height: 20px; top: 18px; left: 77px;
+                     background: url(../img/sp-isabel-cuadro.png) no-repeat -42px -11px;  }
+.bl-toggler.dcha:before { left: 102px; }
+.bl-toggler span:hover { color: black; }
+.bl-toggler span { color: #888; }
+.bl-toggler .act { color: #333; cursor: default; font-weight: 800; }
+.bl-toggler .act:hover { color: #333; cursor: default; }
+#toggle-search { width: 180px; }
+#toggle-statics { width: 230px; position: absolute; bottom: 0; z-index: -1; }
+#toggle-statics.act {  bottom: -50px; z-index: 1; top: initial; }
+/*#toggle-chapter-stats { width: 200px; background-position: 46px -31px; }
+#toggle-chapter-stats:before { left: 63px; }
+#toggle-chapter-stats.dcha:before { left: 87px; }*/
+#toggle-chapter-stats, #toggle-chapter-stats3 { width: 220px; background-position: 68px -31px; }
+#toggle-chapter-stats:before, #toggle-chapter-stats3:before { left: 86px; }
+#toggle-chapter-stats.dcha:before, #toggle-chapter-stats3.dcha:before { left: 108px; }
+#toggle-season-stats { width: 300px; background-position: 79px -31px; }
+#toggle-season-stats:before { left: 97px; }
+#toggle-season-stats.dcha:before { left: 120px; }
+
+#third-season-charter-wrapper {
+    background: url(../img/bg-season-3.jpg) 0 30px no-repeat;
+    width: 1350px;
+    height: 1060px;
+    margin: 90px auto 150px auto;
+    position: relative;
+}
+
+.sferas-info-close { display: block; position: absolute; right: 0; top: 0; padding: 5px 16px; 
+                     text-transform: uppercase; color: white; background: #bd1b42; text-decoration: none; }
+
+/* character  card */
+#char-data { width: 100%; height: 100%; position: absolute; display: none; z-index: 2; }
+#char-data.act { background: white; background: rgba(255,255,255,0.95); display: block; }
+.char-data-wrap { width: 1365px; margin: 80px auto 150px auto; }
+.sferas-info { float: left; width: 525px; margin-left: 50px; margin-right: 25px; padding-top: 29px; }
+.sferas-info .bl-char-rel { display: inline-block; padding: 0 25px 5px 25px; position: relative; }
+.sfera-famili, .sfera-friends, .sfera-enemis { width: 100%; }
+#char-data-season-3 .sferas-info .sfera-famili {
+    padding-top: 200px;
+}
+.sfera-famili { display: block; position: relative; }
+.sfera-famili-no-famili { height: 225px; }
+.sfera-famili .bl-char-circ { position: relative; display: inline-block; }
+/*
+.sfera-famili .bl-char:nth-child(1) { position: relative; left: 58px; top: 80px; }
+.sfera-famili .bl-char:nth-child(4) { position: relative; left: -45px; top: 80px; }
+.sfera-famili .bl-char:nth-child(5) { position: relative; top: 100px; left: 56px; }
+.sfera-famili .bl-char:nth-child(6) { position: relative; top: 100px; left: 215px; }
+*/
+.char-info { float: left; width: 600px; padding-top: 29px; position: relative; }
+.char-info h2 { padding-bottom: 0 }
+
+/* character card t3 */
+#char-data-season-3 { width: 100%; height: 100%; position: absolute; display: none; z-index: 2; }
+#char-data-season-3.act { background: white; background: rgba(255,255,255,0.95); display: block; }
+#char-data-season-3.char-data-wrap { width: 1365px; margin: 80px auto 150px auto; }
+
+
+/* social */
+.social-links a { display: block; width: 80px; height: 30px; background: url(../img/sp-fake-social.png) no-repeat; 
+                  overflow: hidden; text-indent: -999px; }
+.social-links .social-fbook { background-position: -80px 0; width: 55px;}
+
+/* sferas char */
+.char-tree { width: 100%; height: 100%; position: absolute; }
+#legend-topleft { position: absolute; top: -70px; left: 0; z-index: 2; }
+#legend-topright { position: absolute; top: -142px; right: -20px; z-index: 2;  }
+#legend-topright-season3 { position: absolute; top: 0px; right: 5px; z-index: 2;  }
+#legend-season3-topleft { position: absolute; top: 10px; left: 24px; z-index: 2; }
+a.display-search { color: black; text-decoration: none; padding: 5px 20px; background: #f1f1f1; border: 1px solid #dadada;
+                   border-radius: 5px; }
+a.display-search :hover { box-shadow: 1px 1px 3px #ccc; }
+a.display-search:active { box-shadow: inset 1px 1px 3px #ccc; }
+.legend-block { border: 1px solid #bfbfbf; margin: 10px 0; padding: 5px 10px; background: #f2f2f2; }
+.legend-block th { text-align: center; }
+.legend-block tr td { text-align: right; padding: 0 5px; }
+
+.legend-block-season3 { border: 1px solid #bfbfbf; margin: 10px 0; padding: 5px 10px; background: #f2f2f2; }
+.legend-block-season3 table { min-width: 280px; }
+.legend-block-season3 tr td { padding: 2px 5px 0px 5px; vertical-align: middle;}
+.legend-block-season3 tr td hr {
+    height: 1px;
+    border: none;
+    background-color: #bfbfbf;
+    margin-bottom: 11px;
+}
+.legend-block-season3 tr td.circle { width: 20px; }
+
+section.char-tree-noborder div.bl-char-img { border-color: rgba(0,0,0,0); box-shadow: 0 4px 13px 5px rgb(119, 95, 95); }
+.char-tree-wrap { width: 1350px; height: 1020px; margin: 142px auto 150px auto; position: relative; }
+.bl-char-circ { position: absolute; cursor: pointer; -webkit-transition: 0.4s; 
+                -moz-transition: 0.4s; -ms-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s; }
+section.char-tree-noborder .bl-char-circ:hover { z-index: 0; }
+section.char-tree-noborder .bl-char-circ:hover .bl-char-img { -webkit-transform: none; 
+                                                              -o-transform: none; -ms-transform: none; transform: none; z-index: 0;}
+.act-sfera,.bl-char-circ:hover { z-index: 2; }
+.bl-char-img { -webkit-transition: 0.4s; -moz-transition: 0.4s; -ms-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s;
+               -moz-transform-origin: bottom center; -webkit-transform-origin: bottom center; 
+               -o-transform-origin: bottom center; -ms-transform-origin: bottom center; transform-origin: bottom center;  }
+.bl-char-circ:hover .bl-char-img, .act-sfera .bl-char-img { -webkit-transform: scale(1.1); 
+                                                            -o-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); oveflow: hidden; }
+.char-tree .main-sfera, .char-tree .hover-sfera { z-index: 3; }
+.char-tree-hover .bl-char-img { opacity: 0.1; }
+.char-tree-hover .act-sfera .bl-char-img, .char-tree-hover .bl-char-circ:hover .bl-char-img { opacity:1;}
+.char-tree-hover h2 { opacity: 0.2; }
+.char-tree-hover .act-sfera h2, .char-tree-hover .bl-char-circ:hover h2 { opacity: 1; background: rgba(255,255,255,0.8);padding: 0;}
+.bl-char-img { border-radius: 90px; margin-bottom: 6px; width: 100px; height: 100px; border: 3px solid red; }
+.bl-char-img img { border-radius: 110px; -webkit-transition: 0.4s; 
+                   -moz-transition: 0.4s; -ms-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s;}
+.bl-char-circ h2 { font-size: 1em; color: #333; text-align: center; margin: 0 auto;
+                   width: 120%; display: block; left: -10%; position: relative; }
+.bl-char-circ:hover h2 { z-index: 10; background: white; background: rgba(255,255,255,0.8); padding: 0; }
+
+
+.h2BackColor-castilla {
+    background-color: #DD1442 !important;
+}
+.h2BackColor-portugal {
+    background-color: #01A7C1 !important;
+}
+.h2BackColor-nazari {
+    background-color: #CC9600 !important;
+}
+.h2BackColor-inglaterra {
+    background-color: #F07FCC !important;
+}
+.h2BackColor-francia {
+    background-color: #6D9965 !important;
+}
+.h2BackColor-flandes {
+    background-color: #FCC82B !important;
+}
+.h2BackColor-vaticano {
+    background-color: #AB79B8 !important;
+}
+
+.main-sfera h2 { display: none; }
+.main-sfera { cursor: initial; }
+.main-sfera .bl-char-img-family:before, .sfera-familifamili:before { content:''; display: block; position: absolute; 
+                                                                     width: 264px; height: 264px; top: -50px; left: -50px; border-radius: 170px; border: 4px solid red; }
+.sfera-familifamili:before { top: 42px; left: 133px; }
+/* variations */
+#sferas-main { padding: 20px; position: absolute; top: 0; left: 0; }
+.sferas-circs { width: 390px; height: 390px; position: absolute; left: 60px; top: 40px;
+                border-radius: 500px; border: 1px solid #DBDBDB; background: #f2f2f2; }
+.sferas-circs:after { width: 370px; height: 370px; content: ''; position: absolute; left: 60px; top: 510px;
+                      border-radius: 500px; border: 1px solid #DBDBDB; background: #f2f2f2; }
+.sferas-circs:before { width: 760px; height: 760px; content: ''; position: absolute; left: 520px; top: 10px;
+                       border-radius: 500px; border: 1px solid #DBDBDB; background: #f2f2f2; }
+.sferas-circs span { font-size: 1.75em; line-height: 1.2em; color: #565658; display: block; position: absolute; 
+                     z-index: 1; padding: 5px; background: white; }
+#title-castilla { left: 1160px; top: 10px; }
+#title-portugal { left: 360px; top: 0px; width: 200px;}
+#title-nazari { left: 420px; top: 870px; }
+.bl-char-circ-lev1, div.main-sfera { width: 172px; }
+.bl-char-circ-lev1 .bl-char-img, div.main-sfera .bl-char-img { width: 172px; height: 172px; border-width: 4px; }
+.bl-char-circ-lev1 .bl-char-img img, div.main-sfera .bl-char-img img { width: 172px; height: 172px; padding: 0; }
+.bl-char-circ-lev2 { width: 115px; }
+.bl-char-circ-lev2 .bl-char-img { width: 115px; height: 115px; border-width: 4px; }
+.bl-char-circ-lev2 .bl-char-img img { width: 115px; height: 115px; }
+.bl-char-circ-lev3 { width: 80px; }
+.bl-char-circ-lev3 .bl-char-img { width: 76px; height: 76px; border-width: 3px; }
+.bl-char-circ-lev3 .bl-char-img img { width: 76px; height: 76px; }
+.bl-char-circ-cor-portugal .bl-char-img, .bl-char-circ-cor-portugal .bl-char-img-family:before,
+.sfera-famili-portugal:before { border-color: #01A7C1; }
+.bl-char-circ-cor-castilla .bl-char-img, .bl-char-circ-cor-castilla .bl-char-img-family:before,
+.sfera-famili-castilla:before {border-color: #DD1442; }
+.bl-char-circ-cor-nazari .bl-char-img, .bl-char-circ-cor-nazari .bl-char-img-family:before,
+.sfera-famili-nazari:before { border-color: #CC9600; }
+
+.bl-char-circ-cor-inglaterra .bl-char-img, .bl-char-circ-cor-inglaterra .bl-char-img-family:before,
+.sfera-famili-inglaterra:before { border-color: #F07FCC; }
+.bl-char-circ-cor-vaticano .bl-char-img, .bl-char-circ-cor-vaticano .bl-char-img-family:before,
+.sfera-famili-vaticano:before { border-color: #AB79B8; }
+.bl-char-circ-cor-francia .bl-char-img, .bl-char-circ-cor-francia .bl-char-img-family:before,
+.sfera-famili-francia:before { border-color: #6D9965; }
+.bl-char-circ-cor-flandes .bl-char-img, .bl-char-circ-cor-flandes .bl-char-img-family:before,
+.sfera-famili-flandes:before { border-color: #FCC82B; }
+
+/* characters positioning */
+.char-tree .char-0 { left: 792px; top: 745px; } /* alonzas */
+.char-tree .char-1 { top: 476px; left: 940px; } /* juan aragon */
+.char-tree .char-2 { top: 20px; left: 170px; } /* alvaro luna */
+.char-tree .char-3 { top: 22px; left: 973px; } /* isabel portugal */
+.char-tree .char-47 { top: 344px; left: 942px; } /* juan castilla */
+.char-tree .char-5 { top: 50px; left: 610px; } /* maria aragorn */
+.char-tree .char-8 { top: 384px; left: 1214px; } /* Peralta */ 
+.char-tree .char-9 { top: 456px; left: 565px; } /* fernando aragorn */
+.char-tree .char-10 { top: 234px; left: 567px; } /* isabel */
+.char-tree .char-11 { top: 160px; left: 1219px; } /* alfonso d.c. */
+.char-tree .char-12 { top: 33px; left: 331px; } /* alfonsoV. */ 
+.char-tree .char-13 { top: 370px; left: 82px; } /* juana avis */
+.char-tree .char-14 { top: 145px; left: 354px; } /* alfonso V */
+.char-tree .char-15 { top: 14px; left: 810px; } /* cabrera */ 
+.char-tree .char-16 { top: 172px; left: 966px; } /* bobadi */ 
+.char-tree .char-17 { top: 684px; left: 626px; } /* gonzalo cordova */ 
+.char-tree .char-18 { top: 194px; left: 806px; } /* chacon */ 
+.char-tree .char-20 { top: 370px; left: 340px; } /* juana beltraneja */
+.char-tree .char-21 { top: 542px; left: 781px; } /* beltran */
+.char-tree .char-22 { top: 368px; left: 500px; } /* mencia */
+.char-tree .char-25 { top: 250px; left: 1113px; } /* cardenas */ 
+.char-tree .char-27 { top: 407px; left: 241px; } /* pacheco */ 
+.char-tree .char-29 { top: 670px; left: 1170px; } /* diego mendoza */
+.char-tree .char-32 { top: 41px; left: 42px; } /* didi pacheco */
+.char-tree .char-34 { top: 4px; left: 183px; } /* carrillo */ 
+.char-tree .char-35 { top: 747px; left: 911px; } /* pedro mnendoza */
+.char-tree .char-37 { top: 169px; left: 141px; } /* juan2 poru */ 
+.char-tree .char-38 { top: 627px; left: 371px; } /* boabdil */
+.char-tree .char-39 { top: 537px; left: 263px; } /* aixa */ 
+.char-tree .char-40 { top: 67px; left: 660px; } /* hernando */ 
+.char-tree .char-41 { top: 227px; left: 46px; } /* bea braga */ 
+.char-tree .char-42 { top: 617px; left: 942px; } /* bea osoro */
+.char-tree .char-44 { top: 835px; left: 355px; } /* el zagal */  
+.char-tree .char-45 { top: 820px; left: 136px; } /* zoraida */ 
+.char-tree .char-46 { top: 359px; left: 782px; } /* infanta isa */ 
+.char-tree .char-49 { top: 736px; left: 1069px; } /* torquemada */
+.char-tree .char-50 { top: 548px; left: 1230px; } /* badoz */ 
+.char-tree .char-51 { top: 274px; left: 262px; } /* duqeu braga */ 
+.char-tree .char-52 { top: 671px; left: 1170px; } /* suson */  
+.char-tree .char-57 { top: 697px; left: 107px; } /* morayma */ 
+.char-tree .char-72 { top: 698px; left: 220px; } /* muley */ 
+.char-tree .char-79 { left: 1100px; top: 90px; } /* bea de galindo */ 
+.char-tree .char-80 { top: 860px; left: 243px; } /* ABEN Hud*/
+.char-tree .char-81 { top: 581px; left: 154px; } /* ahmed */ 
+.char-tree .char-82 { top: 537px; left: 1055px; } /* colon */ 
+.char-tree .char-83 { top: 397px; left: 1063px; } /* santangel */
+
+.artifact-controls { display: block; width: 200px; height: 50px; position: fixed; right: 0; bottom: 60px; z-index: 5; }
+.artifact-controls a { color: white; font-size: 2em; text-transform: uppercase; text-decoration: none;
+                       background: rgba(0,0,0,0.43); padding: 3px; float: left; margin-right: 10px; z-index: 2; }
+.panzoom-links { top: 30px; right: 80px; position: absolute; }
+.panzoom-links a, #togglefull { display: block; width: 45px; height: 28px; color: #312f30; float: left; clear: left; border: 1px solid #d9d9d9;
+                                -webkit-border-radius: 3px; border-radius: 3px;
+                                background: #f5f5f5;  background: -moz-linear-gradient(top, #f5f5f5 0%, #f0f0f0 100%);
+                                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#f0f0f0));
+                                background: -webkit-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+                                background: -o-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+                                background: -ms-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+                                background: linear-gradient(to bottom, #f5f5f5 0%,#f0f0f0 100%); }
+.panzoom-more { height: 0; overflow: hidden; display: block; float: left; clear: left; }
+.act .panzoom-more { height: 110px; clear: left; }
+#panzoom, #togglefull { font-size: 1.4em; color: #3C3C3C; }
+#panzoom:hover, #togglefull:hover { text-decoration: none; }
+#panzoom { line-height: 1.3em; padding: 3px 3px 3px 10px; width: 37px;
+           background: #f5f5f5 url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px;  
+           background: url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px,  -moz-linear-gradient(top, #f5f5f5 0%, #f0f0f0 100%);
+           background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#f0f0f0));
+           background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -webkit-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+           background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -o-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+           background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -ms-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+           background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, linear-gradient(to bottom, #f5f5f5 0%,#f0f0f0 100%);  }
+.act #panzoom { background: #f5f5f5 url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px; 
+                -webkit-border-radius: 3px 3px 0px 0px; border-radius: 3px 3px 0px 0px; 
+                background: url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px,  -moz-linear-gradient(top, #bbb 0%,#ccc 100%);
+                background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bbb), color-stop(100%,#ccc));
+                background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -webkit-linear-gradient(top, #bbb 0%,#ccc 100%);
+                background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -o-linear-gradient(top, #bbb 0%,#ccc 100%);
+                background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, -ms-linear-gradient(top, #bbb 0%,#ccc 100%);
+                background:  url(../img/sp-isabel-cuadro.png) no-repeat -23px -96px, linear-gradient(to bottom, #bbb 0%,#ccc 100%);  }
+#togglefull { position: absolute; right: 20px; top: 30px; width: 20px; padding: 3px 8px; line-height: 1.3em;
+              background: -moz-linear-gradient(top, #f5f5f5 0%, #f0f0f0 100%);
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#f0f0f0));
+              background: -webkit-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+              background: -o-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+              background: -ms-linear-gradient(top, #f5f5f5 0%,#f0f0f0 100%);
+              background: linear-gradient(to bottom, #f5f5f5 0%,#f0f0f0 100%);  }
+.fullscreen-on #togglefull { background:  -moz-linear-gradient(top, #bbb 0%,#ccc 100%);
+                             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bbb), color-stop(100%,#ccc));
+                             background: -webkit-linear-gradient(top, #bbb 0%,#ccc 100%);
+                             background: -o-linear-gradient(top, #bbb 0%,#ccc 100%);
+                             background: -ms-linear-gradient(top, #bbb 0%,#ccc 100%);
+                             background: linear-gradient(to bottom, #bbb 0%,#ccc 100%);  }
+#panzoom:active, #togglefull:active { -webkit-box-shadow: inset 0 4px 10px -3px black; box-shadow: inset 0 4px 10px -3px black; }
+.panzoom-more a { width: 44px; -webkit-border-radius: 0; border-radius: 0; font-size: 1em; text-align: center; line-height: 2em; }
+.panzoom-more a#panzoom5 { -webkit-border-radius: 0px 0px 3px 3px; border-radius: 0px 0px 3px 3px; }
+.panzoom-more .act { color: white;
+                     background: -moz-linear-gradient(top, #999 0%,#eee  100%);
+                     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999), color-stop(100%,#eee ));
+                     background: -webkit-linear-gradient(top, #999 0%,#eee  100%);
+                     background: -o-linear-gradient(top, #999 0%,#eee  100%);
+                     background: -ms-linear-gradient(top, #999 0%,#eee  100%);
+                     background: linear-gradient(to bottom, #999 0%,#eee  100%); }
+.panzoom-more a:hover { text-decoration: none; color: black; }
+.panzoom-more a:active { -webkit-box-shadow: inset 0 4px 10px -3px black; box-shadow: inset 0 4px 10px -3px black; top: 0; }
+
+.nojschar, .no-js { overflow: auto; height: auto; }
+#nojschar { width: 980px; top: 15000px; position: relative; }
+.no-js #main-main { display: none; }
+
+@keyframes fadeIn {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+@keyframes almostfadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.3; }
+}
+
+@-webkit-keyframes almostfadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.3; }
+}
+
+
+/* http://cssload.net/ */
+#circularG { position:relative; width:128px; height:128px; margin: 0 auto; }
+.circularG { position: absolute; background-color: #bd1b42; width:29px; height:29px;
+             -moz-border-radius:19px; -moz-animation-name:bounce_circularG; -moz-animation-duration:1.04s; -moz-animation-iteration-count:infinite;
+             -moz-animation-direction:linear; -webkit-border-radius:19px;
+             -webkit-animation-name:bounce_circularG; -webkit-animation-duration:1.04s; -webkit-animation-iteration-count:infinite;
+             -webkit-animation-direction:linear; -ms-border-radius:19px;
+             -ms-animation-name:bounce_circularG; -ms-animation-duration:1.04s; -ms-animation-iteration-count:infinite;
+             -ms-animation-direction:linear; -o-border-radius:19px; -o-animation-name:bounce_circularG;
+             -o-animation-duration:1.04s; -o-animation-iteration-count:infinite; -o-animation-direction:linear;
+             border-radius:19px; animation-name:bounce_circularG; animation-duration:1.04s; animation-iteration-count:infinite; animation-direction:linear; }
+#circularG_1{  left:0; top:50px; -moz-animation-delay:0.39s;-webkit-animation-delay:0.39s;
+               -ms-animation-delay:0.39s; -o-animation-delay:0.39s; animation-delay:0.39s;
+}
+#circularG_2{ left:14px; top:14px; -moz-animation-delay:0.52s; -webkit-animation-delay:0.52s;
+              -ms-animation-delay:0.52s; -o-animation-delay:0.52s; animation-delay:0.52s;
+}
+#circularG_3{ top:0; left:50px; -moz-animation-delay:0.65s; -webkit-animation-delay:0.65s;
+              -ms-animation-delay:0.65s; -o-animation-delay:0.65s; animation-delay:0.65s;
+}
+#circularG_4{ right:14px; top:14px; -moz-animation-delay:0.78s; -webkit-animation-delay:0.78s;
+              -ms-animation-delay:0.78s; -o-animation-delay:0.78s; animation-delay:0.78s;
+}
+#circularG_5{ right:0; top:50px; -moz-animation-delay:0.91s; -webkit-animation-delay:0.91s;
+              -ms-animation-delay:0.91s; -o-animation-delay:0.91s; animation-delay:0.91s; }
+#circularG_6{ right:14px; bottom:14px; -moz-animation-delay:1.04s; -webkit-animation-delay:1.04s;
+              -ms-animation-delay:1.04s; -o-animation-delay:1.04s; animation-delay:1.04s; }
+#circularG_7 { left:50px; bottom:0; -moz-animation-delay:1.17s; -webkit-animation-delay:1.17s;
+               -ms-animation-delay:1.17s; -o-animation-delay:1.17s; animation-delay:1.17s; }
+#circularG_8{ left:14px; bottom:14px;
+              -moz-animation-delay:1.3s; -webkit-animation-delay:1.3s; -ms-animation-delay:1.3s;
+              -o-animation-delay:1.3s; animation-delay:1.3s; }
+
+@-moz-keyframes bounce_circularG{
+    0%{-moz-transform:scale(1)}
+    100%{-moz-transform:scale(.3)}
+}
+
+@-webkit-keyframes bounce_circularG{
+    0%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(.3)}
+}
+
+@-ms-keyframes bounce_circularG{
+    0%{-ms-transform:scale(1)}
+    100%{-ms-transform:scale(.3)}
+}
+
+@-o-keyframes bounce_circularG{
+    0%{-o-transform:scale(1)}
+    100%{-o-transform:scale(.3)}
+}
+
+@keyframes bounce_circularG{
+    0%{transform:scale(1)}
+    100%{transform:scale(.3)}
+}
