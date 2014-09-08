@@ -1,0 +1,210 @@
+/* ___-_ main elements _-________________ *//* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  margin: 0; padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: '';  content: none; } table {  border-collapse: collapse; border-spacing: 0; }
+
+html, body { height: 100%; margin: 0; padding: 0; position: relative; overflow: hidden; }
+body{width:100%;height:100%;font-weight: 100;}
+
+
+/* ___-_ font-face _-________________ */
+
+/*
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=3.2.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'), 
+       url('../fonts/fontawesome-webfont.woff?v=3.2.0') format('woff'), 
+       url('../fonts/fontawesome-webfont.ttf?v=3.2.0') format('truetype'), 
+       url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.ft-awesome { font-family: 'FontAwesome'; }
+*/
+body { color: #333; font-family: "RTVEfontR", Arial, Helvetica, sans-serif; font-size: 16px; position: relative; }
+
+/* ___-_ main elements _-________________ */
+h1{ padding-bottom: 24px; font-size: 1.75em; line-height: 1.2em; }
+h2{ padding-bottom: 20px; font-size: 1.75em; line-height: 1.2em; }
+h3{ padding-bottom: 20px; font-size: 1.25em; line-height: 1.2em; }
+h4{ padding-bottom: 10px; font-size: 1.25em; line-height: 1.2em; }
+h5{ padding-bottom: 10px; font-size: 1.5em; line-height: 1.1em; }
+h6{ padding-bottom:  8px; font-size: 1.1em; line-height: 1.1em; }
+
+a { text-decoration: underline; color: #888888;
+    -webkit-transition: color .3s ease-in;-moz-transition: color .3s ease-in;-ms-transition: color .3s ease-in;
+    -transition: color .3s ease-in;transition: color .3s ease-in; }
+  a:hover { color: #10634C; }
+a.block { display: block; height: 100%; width: 100%; }
+
+.wk-table { display: table; height: 100%; }
+.wk-table-cell { display: table-cell; vertical-align: middle;}
+
+/* ___-_ lab bars _-________________ */
+#lab-header { width:100%; top: 0; left: 0; z-index: 999; background: black; 
+    font-size: 0.8em; text-align: center; height: 2.4em; position: fixed; }
+  #lab-header .logo { position: relative; z-index: 1; float: left; height: 2.4em; width: 8.4em; padding: 0; background: url("../img/sp--lab.png") 5px 4px no-repeat; }
+    #lab-header .logo a { display:block; height: 100%; width: 100%; text-indent: -999px; overflow: hidden;}
+
+  #lab-header #menu { display: block; margin: 0; padding: 0; line-height: 2.4em; float: left; height: 2.4em; width: 100%; position: absolute; }
+    #lab-header #menu li { display: inline; margin: 0; padding:0; list-style:none; overflow: hidden; }
+      #lab-header #menu a { display: inline-block; color: #c2c1c1; text-decoration:none; padding: 0 8px 10px 8px; 
+          text-transform: uppercase; line-height: 1em; position: relative; }
+        #lab-header #menu a:hover { color: #ffffff; }
+        #lab-header #menu a:before { display: block; content: '|'; position: absolute; left: -10px; top: 0; padding-left: 5px; }
+          #lab-header #menu li:first-child a:before { display: none; }
+
+  #lab-header .social-lockup { position:absolute; top: 0; right: 0; }
+    .social-lockup-oficial { padding: 4px 0px; }
+    #lab-header .social-lockup a { display: block; float: right; text-indent: -999px; overflow: hidden; 
+        width: 30px; height: 30px; background: url("../img/sp--lab.png") top left no-repeat;  }
+      #lab-header .social-lockup .social-fbook { background-position: 5px -35px; }
+      #lab-header .social-lockup .social-twitter { background-position: 5px -68px; }
+
+#lab-footer { float: left; display :inline; width:100%; margin: 30px 0 0 0; padding: 0; position: absolute; z-index: 3;
+    background: black; font-size:13px; text-align:center; }
+  #lab-footer ul { display:inline; margin:0; padding:0; width:100%; float:left; line-height:25px;}
+    #lab-footer ul li { display:inline; margin:0; padding:0 5px 0 0; list-style:none; color:#c2c1c1;}
+    #lab-footer ul li a { color: #c2c1c1; text-decoration: none; padding: 0 5px}
+    #lab-footer ul li a:hover { text-decoration: underline; } 
+#lab-footer.lab-footer-fixed { position: fixed; bottom: 0 }
+
+/* ___-_ layout _-________________ */
+
+
+#bl-conquista { background: url(../img/webdoc.jpg) no-repeat; background-size: cover; }
+#bl-personajes { background: url(../img/personajes.jpg) no-repeat; background-size: cover; }
+#bl-rendicion { background: url(../img/cuadro.jpg) no-repeat; background-size: cover; }
+
+.container {width:100%;height:100%;margin:0px;paddding:0px;}
+.webs {
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.webs li {
+	margin: 0px;
+	padding: 0px;
+	width:50%;
+	height:50%;
+	float:left;
+	display:inline
+}
+
+.webs li:first-child {
+	margin: 0px;
+	padding: 0px;
+	width:50%;
+	height:100%;
+	float:left;
+	display:inline
+} 
+.webs li:first-child span {text-align:center;margin-left:4%;}
+.webs li:first-child div span h2 {width:70%;font-size:1.5em;}
+.webs li:first-child div span p {width:60%;margin-left:4%}
+.webs li a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width:100%;
+	height:100%
+}
+
+.webs li a div {
+	display: none;
+	position: absolute;
+	background: #333;
+	background: url(../img/bg-oldstyle.png);
+	width: 100%;
+	height: 100%;
+
+}
+.webs li a img{
+	width:100%;
+	height:50%;
+	display: block;
+	position: relative;
+}
+.webs li:first-child a img{
+	height:100%;
+}
+.webs li a div span {
+	display: block;
+	text-align:center;
+	padding-top:100px;
+	margin-left:30%;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size:2em;
+	font-family: "RTVEfontB";
+	color: rgba(30,30,30,1);
+	text-shadow: 1px 1px 1px rgba(215,215,215,0.9);
+	height:100%;
+	z-index:9999!important;
+	opacity:0.8;
+
+
+}
+.webs li a div span p{
+	width:50%;
+	margin-left:25%;
+	text-transform:initial;
+	text-align:center;	
+	font-size:22px;
+	font-family: "RTVEfontSansR";
+	color: rgba(20,20,20,1);
+	text-shadow: 1px 1px 1px rgba(220,220,220,0.9);
+	z-index:9998!important;
+}
+
+.datoslab {position:absolute;top:0px;left:50%;margin-left:-13%;width:25%;height:100%;background-color:rgba(0,0,0,0.8);text-align:center;padding:0 20px;
+		min-width: 260px;}
+	.datoslab img{width:52%;height:auto;margin-top:40px}
+	.datoslab p { margin-left: 5%; width: 90%; font-family:'RTVEfontSansR'; font-size:0.9em; line-height:1.2em; color:white; margin-top:20px}
+	.datoslab h1 {font-family:'RTVEfontSansR';font-size:6em;color:white;margin-top:10px; margin-bottom:0px; line-height: 1em;
+		margin-left:auto;text-transform:uppercase;letter-spacing:1px; font-weight: 100;}
+	.datoslab h2 {font-family:'RTVEfontSansR';font-size:1em;color:white;margin-left:auto;text-transform:uppercase; }
+		.datoslab h2 a { text-decoration: none; color: white; }
+			.datoslab h2 a:hover { text-decoration: underline; }
+
+@media (max-width: 1250px) {
+	.datoslab { margin-left: -160px; }
+	.datoslab img { width: 52%; }
+	.datoslab h1 {font-size:5em;}
+	.webs li a div span{	
+		padding-top:50px;
+		font-size:2em;
+		margin-left:30%;
+	}
+	.webs li a div span p{
+		width:60%;
+		margin-left:20%;
+		font-size:18px;
+	}
+	.datoslab p { display: none; }
+}
+
+@media (max-width: 1024px) {
+	.datoslab img { width: 82%; }
+	.datoslab h1 {font-size:4em;}
+	.webs li a div span{	
+		padding-top:50px;
+		margin-left:32%;
+	}
+}
+
+@media (max-width: 850px) {
+	.datoslab img { width: 82%; }
+	.datoslab h1 {font-size:4em;}
+	.webs li a div span{	
+		padding-top:50px;
+		margin-left:32%;
+	}
+
+}

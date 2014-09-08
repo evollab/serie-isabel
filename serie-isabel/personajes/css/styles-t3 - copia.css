@@ -1,0 +1,76 @@
+/* characters positioning */
+.char-tree.last-season .char-0 { left: 900px; top: 745px; display: none; } /* alonzas */
+.char-tree.last-season .char-1 { top: 476px; left: 940px; } /* juan aragon */
+.char-tree.last-season .char-2 { top: 20px; left: 170px;  display: none;} /* alvaro luna */
+.char-tree.last-season .char-3 { top: 683px; left: 490px;} /* isabel portugal */
+.char-tree.last-season .char-47 { top: 344px; left: 942px;  display: none;} /* juan castilla */
+.char-tree.last-season .char-5 { top: 50px; left: 610px;  display: none;} /* maria aragorn */
+.char-tree.last-season .char-8 { top: 384px; left: 1214px;  display: none;} /* Peralta */ 
+.char-tree.last-season .char-9 { top: 445px; left: 690px; } /* fernando aragorn */
+.char-tree.last-season .char-10 { top: 445px; left: 490px; } /* isabel */
+.char-tree.last-season .char-11 { top: 160px; left: 1219px; display: none; } /* alfonso d.c. */
+.char-tree.last-season .char-12 { top: 33px; left: 331px; display: none; } /* alfonsoV. */ 
+.char-tree.last-season .char-13 { top: 370px; left: 82px; display: none; } /* juana avis */
+.char-tree.last-season .char-14 { top: 145px; left: 354px; display: none; } /* alfonso V */
+.char-tree.last-season .char-15 { top: 0px; left: 524px;} /* cabrera */ 
+.char-tree.last-season .char-16 { top: 227px; left: 326px;} /* bobadi */ 
+.char-tree.last-season .char-17 { top: 600px; left: 253px;} /* gonzalo cordova */ 
+.char-tree.last-season .char-18 { top: 383px; left: 272px;} /* chacon */ 
+.char-tree.last-season .char-20 { top: 370px; left: 340px; display: none; } /* juana beltraneja */
+.char-tree.last-season .char-21 { top: 542px; left: 781px;  display: none;} /* beltran */
+.char-tree.last-season .char-22 { top: 368px; left: 500px;  display: none;} /* mencia */
+.char-tree.last-season .char-25 { top: 250px; left: 1113px; display: none; } /* cardenas */ 
+.char-tree.last-season .char-27 { top: 407px; left: 241px;  display: none;} /* pacheco */ 
+.char-tree.last-season .char-29 { top: 670px; left: 1170px; display: none; } /* diego mendoza */
+.char-tree.last-season .char-31 { top: 670px; left: 1170px; display: none; } /* Rodrigo de Borja No debería aparecer */
+.char-tree.last-season .char-32 { top: 41px; left: 42px; display: none; } /* didi pacheco */
+.char-tree.last-season .char-34 { top: 4px; left: 183px; display: none; } /* carrillo */ 
+.char-tree.last-season .char-35 { top: 747px; left: 911px; display: none; } /* pedro mnendoza */
+.char-tree.last-season .char-37 { top: 136px; left: 513px; } /* juan2 poru */ 
+.char-tree.last-season .char-38 { top: 627px; left: 371px; display: none; } /* boabdil */
+.char-tree.last-season .char-39 { top: 537px; left: 263px;  display: none;} /* aixa */ 
+.char-tree.last-season .char-40 { top: 811px; left: 405px;} /* hernando */ 
+.char-tree.last-season .char-41 { top: 14px; left: 810px;} /* bea braga */ 
+.char-tree.last-season .char-42 { top: 617px; left: 942px;  display: none;} /* bea osoro */
+.char-tree.last-season .char-44 { top: 835px; left: 355px;  display: none;} /* el zagal */  
+.char-tree.last-season .char-45 { top: 820px; left: 136px;  display: none;} /* zoraida */ 
+.char-tree.last-season .char-46 { top: 359px; left: 782px;  display: none;} /* infanta isa */ 
+.char-tree.last-season .char-49 { top: 736px; left: 1069px;  display: none;} /* torquemada */
+.char-tree.last-season .char-50 { top: 548px; left: 1230px;  display: none;} /* badoz */ 
+.char-tree.last-season .char-51 { top: 274px; left: 262px;  display: none;} /* duqeu braga */ 
+.char-tree.last-season .char-52 { top: 671px; left: 1170px;  display: none;} /* suson */  
+.char-tree.last-season .char-57 { top: 697px; left: 107px;  display: none;} /* morayma */ 
+.char-tree.last-season .char-72 { top: 698px; left: 220px;  display: none;} /* muley */ 
+.char-tree.last-season .char-79 { left: 1100px; top: 90px;  display: none;} /* bea de galindo */ 
+.char-tree.last-season .char-80 { top: 860px; left: 243px;  display: none;} /* ABEN Hud*/
+.char-tree.last-season .char-81 { top: 581px; left: 154px;  display: none;} /* ahmed */ 
+.char-tree.last-season .char-82 { top: 470px; left: 55px;} /* colon */ 
+.char-tree.last-season .char-83 { top: 397px; left: 1063px;  display: none;} /* santangel */
+.char-tree.last-season .char-87 { top: 257px; left: 685px;} /* María de Aragón */
+.char-tree.last-season .char-88 { top: 370px; left: 880px;} /* Juan de Aragón */
+.char-tree.last-season .char-89 { top: 624px; left: 858px;} /* Juana I de Castilla */
+.char-tree.last-season .char-90 { top: 721px; left: 651px;} /* Catalina de Aragón  */
+.char-tree.last-season .char-91 { top: 87px; left: 634px;} /* Manuel I de Portugal*/
+.char-tree.last-season .char-92 { top: 175px; left: 853px;} /* Margarita de Austria (de Flandes, de Hasburgo) */
+.char-tree.last-season .char-93 { top: 459px; left: 1038px;} /* Felipe el Hermoso */
+.char-tree.last-season .char-94 { top: 888px; left: 753px;} /* Enrique VIII */
+.char-tree.last-season .char-95 { top: 990px; left: 540px;} /* César Borgia */
+.char-tree.last-season .char-96 { top: 856px; left: 1030px;} /* Luis de Tremoille */
+.char-tree.last-season .char-97 { top: 610px; left: 1140px;} /* Carlos VIII */
+.char-tree.last-season .char-98 { top: 156px; left: 1039px;} /* Ana de Bretaña */
+.char-tree.last-season .char-99 { top: 310px; left: 1131px;} /* Luis XII */
+.char-tree.last-season .char-100 { top: 833px; left: 267px;} /* Juan Rodríguez de Fonseca */
+.char-tree.last-season .char-101 { top: 943px; left: 396px;} /* Bernardo Boyl */
+.char-tree.last-season .char-102 { top: 200px; left: 200px;} /* Juan Rodríguez de Fonseca */
+.char-tree.last-season .char-103 { top: 15px; left: 303px;} /* Gutierre Gómez de Fuensalida */
+.char-tree.last-season .char-104 { top: 280px; left: 440px;} /* Isabel de Aragón */
+.char-tree.last-season .char-105 { top: 710px; left: 150px;} /* Francisco Jiménez de Cisneros */
+.char-tree.last-season .char-106 { top: 837px; left: 230px;} /* Gutierre Gómez de Fuensalida */
+
+#sferas-raphaelstatics-chaps3 { position: absolute; top: 0; left: 0;-webkit-transition: 0.4s; z-index: 2;
+                                                       -moz-transition: 0.4s; -ms-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s; pointer-events: none; }
+
+
+#season-3-wrapper {
+    
+}
